@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class LoginController : MonoBehaviour {
 
-    private const string Login = "Admin";
-    private const string Pass = "Admin";
 
     [SerializeField]
     private InputField usuarioF = null;
@@ -17,7 +15,9 @@ public class LoginController : MonoBehaviour {
     [SerializeField]
     private Toggle LembrarDados = null;
 
-    
+    private string url = "http://localhost/pi/controle/login.php";
+
+
     void Start () {
 		if(PlayerPrefs.HasKey("lembra") && PlayerPrefs.GetInt("lembra") == 1) {
             usuarioF.text = PlayerPrefs.GetString("rememberLogin");
@@ -30,32 +30,56 @@ public class LoginController : MonoBehaviour {
     }
 
 	public void FazerLogin () {
-        string usuario = usuarioF.text;
-        string senha = senhaF.text;
-
-        if (LembrarDados.isOn) {
-            PlayerPrefs.SetInt("lembra", 1);
-            PlayerPrefs.SetString("rememberLogin", usuario);
-            PlayerPrefs.SetString("rememberPass", senha);
-        }
-
-        if(usuario == Login && senha == Pass) {
-            FeedBackMsg.CrossFadeAlpha(100f, 0, false);
-            FeedBackMsg.color = Color.green;
-            FeedBackMsg.text = "Login realizado com sucesso\nCarregando Jogo...";
-            StartCoroutine(CarregaScene());
+        if (usuarioF.text == "" || senhaF.text == "") {
+            FeedBakcError("Preencha todos os campos!");
         } else {
-            FeedBackMsg.CrossFadeAlpha(100f, 0f, false);
-            FeedBackMsg.color = Color.red;
-            FeedBackMsg.text = "Usuário ou Senha inválidos";
-            FeedBackMsg.CrossFadeAlpha(0f, 2f, false);
-            usuarioF.text = "";
-            senhaF.text = "";
+            string usuario = usuarioF.text;
+            string senha = senhaF.text;
+
+            if (LembrarDados.isOn) {
+                PlayerPrefs.SetInt("lembra", 1);
+                PlayerPrefs.SetString("rememberLogin", usuario);
+                PlayerPrefs.SetString("rememberPass", senha);
+            }
+
+            WWW www = new WWW ( url + "?login=" + usuario + "&senha=" + senha );
+            StartCoroutine(ValidaLogin(www));
+        }
+    }
+
+    IEnumerator ValidaLogin(WWW www) {
+        yield return www;
+        if(www.error == null) {
+            if (www.text == "1") {
+                FeedBackOK("Login Realizado com sucesso\nCarregando Jogo...");
+                StartCoroutine(CarregaScene());
+            } else {
+                FeedBakcError("Usuário ou Senha inválidos");
+            }
+        } else {
+            if (www.error == "Cannot connect to destination") {
+                FeedBakcError("Servidor Indisponivel!!");
+            }
         }
     }
 
     IEnumerator CarregaScene() {
         yield return new WaitForSeconds(5);
-        Application.LoadLevel("Level1Exemplo");
+        Application.LoadLevel("Cadastro");
+    }
+
+    void FeedBackOK(string mensagem) {
+        FeedBackMsg.CrossFadeAlpha(100f, 0, false);
+        FeedBackMsg.color = Color.green;
+        FeedBackMsg.text = mensagem;
+    }
+
+    void FeedBakcError(string mensagem) {
+        FeedBackMsg.CrossFadeAlpha(100f, 0f, false);
+        FeedBackMsg.color = Color.red;
+        FeedBackMsg.text = mensagem;
+        FeedBackMsg.CrossFadeAlpha(0f, 2f, false);
+        usuarioF.text = "";
+        senhaF.text = "";
     }
 }
