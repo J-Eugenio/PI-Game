@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class LoginController : MonoBehaviour {
 
-    private const string Login = "Aljoker";
-    private const string Pass = "123";
+    private const string Login = "Admin";
+    private const string Pass = "Admin";
 
     [SerializeField]
-    private InputField usuario = null;
+    private InputField usuarioF = null;
     [SerializeField]
-    private InputField senha = null;
+    private InputField senhaF = null;
     [SerializeField]
     private Text FeedBackMsg = null;
     [SerializeField]
@@ -19,11 +19,39 @@ public class LoginController : MonoBehaviour {
 
     
     void Start () {
-		
+		if(PlayerPrefs.HasKey("lembra") && PlayerPrefs.GetInt("lembra") == 1) {
+            usuarioF.text = PlayerPrefs.GetString("rememberLogin");
+            senhaF.text = PlayerPrefs.GetString("rememberPass");
+        }
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+	public void FazerLogin () {
+        string usuario = usuarioF.text;
+        string senha = senhaF.text;
+
+        if (LembrarDados.isOn) {
+            PlayerPrefs.SetInt("lembra", 1);
+            PlayerPrefs.SetString("rememberLogin", usuario);
+            PlayerPrefs.SetString("rememberPass", senha);
+        }
+
+        if(usuario == Login && senha == Pass) {
+            FeedBackMsg.CrossFadeAlpha(100f, 0, false);
+            FeedBackMsg.color = Color.green;
+            FeedBackMsg.text = "Login realizado com sucesso\nCarregando Jogo...";
+            StartCoroutine(CarregaScene());
+        } else {
+            FeedBackMsg.CrossFadeAlpha(100f, 0f, false);
+            FeedBackMsg.color = Color.red;
+            FeedBackMsg.text = "Usuário ou Senha inválidos";
+            FeedBackMsg.CrossFadeAlpha(0f, 2f, false);
+            usuarioF.text = "";
+            senhaF.text = "";
+        }
+    }
+
+    IEnumerator CarregaScene() {
+        yield return new WaitForSeconds(5);
+        Application.LoadLevel("Level1Exemplo");
+    }
 }
