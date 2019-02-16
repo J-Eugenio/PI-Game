@@ -690,7 +690,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Login
+  m_Text: 'Cadastro  REFAZER AINDA
+
+'
 --- !u!222 &645614818
 CanvasRenderer:
   m_ObjectHideFlags: 0
