@@ -25,6 +25,10 @@ public class LoginController : MonoBehaviour {
         }
 	}
 
+    public void Exit() {
+        Application.Quit();
+    }
+
 	public void FazerLogin () {
         string usuario = usuarioF.text;
         string senha = senhaF.text;
