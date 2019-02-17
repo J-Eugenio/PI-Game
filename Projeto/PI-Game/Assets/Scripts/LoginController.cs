@@ -15,8 +15,7 @@ public class LoginController : MonoBehaviour {
     [SerializeField]
     private Toggle LembrarDados = null;
 
-    private string url = "http://localhost/pi/controle/login.php";
-
+    private string urlLogin = "http://localhost/pi/controle/login.php";
 
     void Start () {
 		if(PlayerPrefs.HasKey("lembra") && PlayerPrefs.GetInt("lembra") == 1) {
@@ -28,8 +27,10 @@ public class LoginController : MonoBehaviour {
     public void Exit() {
         Application.Quit();
     }
-
-	public void FazerLogin () {
+    public void  irCadastro() {
+        Application.LoadLevel("Cadastro");
+    }
+    public void FazerLogin () {
         if (usuarioF.text == "" || senhaF.text == "") {
             FeedBakcError("Preencha todos os campos!");
         } else {
@@ -42,7 +43,7 @@ public class LoginController : MonoBehaviour {
                 PlayerPrefs.SetString("rememberPass", senha);
             }
 
-            WWW www = new WWW ( url + "?login=" + usuario + "&senha=" + senha );
+            WWW www = new WWW (urlLogin + "?login=" + usuario + "&senha=" + senha );
             StartCoroutine(ValidaLogin(www));
         }
     }
@@ -64,8 +65,8 @@ public class LoginController : MonoBehaviour {
     }
 
     IEnumerator CarregaScene() {
-        yield return new WaitForSeconds(5);
-        Application.LoadLevel("Cadastro");
+        yield return new WaitForSeconds(2);
+        Application.LoadLevel("Level1Exemplo");
     }
 
     void FeedBackOK(string mensagem) {
