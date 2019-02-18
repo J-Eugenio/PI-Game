@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class LoginController : MonoBehaviour {
@@ -29,7 +28,7 @@ public class LoginController : MonoBehaviour {
         Application.Quit();
     }
     public void  irCadastro() {
-        SceneManager.LoadScene("Cadastro");
+        Application.LoadLevel("Cadastro");
     }
     public void FazerLogin () {
         if (usuarioF.text == "" || senhaF.text == "") {
@@ -67,7 +66,7 @@ public class LoginController : MonoBehaviour {
 
     IEnumerator CarregaScene() {
         yield return new WaitForSeconds(2);
-        SceneManager.LoadScene("MenuPrincipal");
+        Application.LoadLevel("Level1Exemplo");
     }
 
     void FeedBackOK(string mensagem) {
