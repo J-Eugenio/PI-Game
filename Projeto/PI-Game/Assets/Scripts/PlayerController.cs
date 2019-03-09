@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour {
         anim.SetFloat("Velocidade", Mathf.Abs(h));
 
         player.velocity = new Vector2(h * speed, player.velocity.y);
-        if(h > 0 && !facingRight) {
+        if (h > 0 && !facingRight) {
             Flip();
         } else if (h < 0 && facingRight) {
             Flip();
