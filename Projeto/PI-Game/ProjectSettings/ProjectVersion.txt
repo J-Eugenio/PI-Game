@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-m_EditorVersion: 2018.3.0f2
-=======
-m_EditorVersion: 2018.2.15f1
->>>>>>> parent of cdda5b5... tutorial - em desemvolvimento
+m_EditorVersion: 2018.3.8f1
