@@ -3853,7 +3853,7 @@ GameObject:
   - component: {fileID: 1728681139}
   - component: {fileID: 1728681142}
   - component: {fileID: 1728681141}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pisoObstaculo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
