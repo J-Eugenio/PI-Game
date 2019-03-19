@@ -20,7 +20,7 @@ public class MenuController : MonoBehaviour {
         StartCoroutine(carregarVoltar());
     }
     IEnumerator carregarScena() {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0);
         SceneManager.LoadScene("Level1");
     }
     IEnumerator carregarOptions() {
