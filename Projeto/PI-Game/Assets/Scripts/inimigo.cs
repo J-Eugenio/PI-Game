@@ -10,12 +10,13 @@ public class inimigo : MonoBehaviour
     bool facingRight = false;
     bool noChao = false;
     Transform groundCheck;
-
+    Animator ani;
     public float jumpForce = 700;
     void Start()
     {
         ini = gameObject.GetComponent<Rigidbody2D>();
         groundCheck = transform.Find("EnemyGroundCheck");
+        ani = gameObject.GetComponent<Animator>();
     }
 
     void Update()
@@ -50,6 +51,7 @@ public class inimigo : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D obj) {
         if (obj.gameObject.CompareTag("Player")) {
+            
             BoxCollider2D[] boxes = gameObject.GetComponents<BoxCollider2D>();
             foreach(BoxCollider2D box in boxes) {
                 box.enabled = false;
@@ -58,7 +60,13 @@ public class inimigo : MonoBehaviour
             obj.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
             velocidade = 0;
             transform.Rotate(new Vector3(0, 0, -180));
-            Destroy(gameObject, 2);
+            Destroy(gameObject, 3);
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D obj) {
+        if (obj.gameObject.CompareTag("Player")) {
+            obj.gameObject.GetComponent<PlayerLife>().PerdeVida();
         }
     }
 }

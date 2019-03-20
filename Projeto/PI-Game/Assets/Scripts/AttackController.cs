@@ -22,7 +22,6 @@ public class AttackController : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log("Acertou");
         if (other.gameObject.CompareTag("Enemy")) {
             
             other.gameObject.GetComponent<inimigo>().enabled = false;
@@ -30,11 +29,11 @@ public class AttackController : MonoBehaviour
             foreach(BoxCollider2D box in boxes) {
                 box.enabled = false;
             }
-
+            
             if(other.transform.position.x < transform.position.x) {
                 forcaHorizontal *= -1;
             }
-
+            
             other.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(forcaHorizontal, forcaVertical), ForceMode2D.Impulse);
             Destroy(other.gameObject, tempoDeDestruicao);
 
