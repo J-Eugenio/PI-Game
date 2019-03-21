@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -28,7 +29,14 @@ public class GameManager : MonoBehaviour
     public void SetVidas(int vida) {
         vidas += vida;
         if(vidas >= 0)
-        AtualizaHud();
+        {
+            AtualizaHud();
+        }
+        else
+        {
+            SceneManager.LoadScene("GameOver");
+        }
+        
     }
     public int GetVidas() {
         return vidas;
