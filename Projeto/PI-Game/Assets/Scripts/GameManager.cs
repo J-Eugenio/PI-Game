@@ -35,6 +35,9 @@ public class GameManager : MonoBehaviour
         else
         {
             SceneManager.LoadScene("GameOver");
+            vidas = 2;
+            //carregando duas vidas novas para quando acessar a tela de game over e jogar novamente ele já ter 2 novas vidas,
+            //e não continuar diminuindo.
         }
         
     }
