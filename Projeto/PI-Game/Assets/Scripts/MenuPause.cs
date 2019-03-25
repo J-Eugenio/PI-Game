@@ -38,4 +38,10 @@ public class MenuPause : MonoBehaviour {
     public void QuitGame() {
         Application.Quit();
     }
+
+    public void ReiniciarPartida() {
+        Time.timeScale = 1f;
+        GameManager.gm.Addvidas(2);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }

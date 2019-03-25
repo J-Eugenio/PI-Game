@@ -25,7 +25,10 @@ public class GameManager : MonoBehaviour
     {
         
     }
-
+    
+    public void Addvidas(int vidas) {
+        this.vidas = vidas;
+    }
     public void SetVidas(int vida) {
         vidas += vida;
         if(vidas >= 0)
