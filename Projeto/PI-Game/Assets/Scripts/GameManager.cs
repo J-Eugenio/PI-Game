@@ -7,6 +7,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager gm;
+
     private int vidas = 2;
 
     void Awake()

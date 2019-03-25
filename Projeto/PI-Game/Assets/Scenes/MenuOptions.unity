@@ -2310,6 +2310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: b501940d51fbb6f409657b19607fe7b0, type: 2}
   resolucoes: {fileID: 1519686487}
+  volume: {fileID: 1435706490}
 --- !u!1 &1204164703
 GameObject:
   m_ObjectHideFlags: 0
@@ -2812,16 +2813,16 @@ MonoBehaviour:
   m_FillRect: {fileID: 429001624}
   m_HandleRect: {fileID: 418206518}
   m_Direction: 0
-  m_MinValue: -80
-  m_MaxValue: 0
+  m_MinValue: 0
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: -80
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1080727001}
         m_MethodName: SetVolume
-        m_Mode: 0
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3476,7 +3477,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1603511308}
   - component: {fileID: 1603511307}
-  - component: {fileID: 1603511306}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3484,14 +3484,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1603511306
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1603511305}
-  m_Enabled: 1
 --- !u!20 &1603511307
 Camera:
   m_ObjectHideFlags: 0
