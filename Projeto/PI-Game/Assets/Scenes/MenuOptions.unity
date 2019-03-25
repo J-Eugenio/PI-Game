@@ -2813,10 +2813,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 429001624}
   m_HandleRect: {fileID: 418206518}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 15
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: -34
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:

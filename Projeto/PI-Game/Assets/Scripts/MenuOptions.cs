@@ -10,8 +10,7 @@ public class MenuOptions : MonoBehaviour {
     public Dropdown resolucoes;
     public Slider volume;
     void Start() {
-        //audioMixer.SetFloat("volume", volume.value);
-        
+        audioMixer.SetFloat("volume", volume.value);
         resolutions = Screen.resolutions;
         resolucoes.ClearOptions();
         List<string> options = new List<string>();
