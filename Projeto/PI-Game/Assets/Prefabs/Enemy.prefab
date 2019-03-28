@@ -180,6 +180,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidade: 2
+  plantaforma: 0
+  NaPlantaforma: 0
   jumpForce: 700
 --- !u!50 &6355799997088205040
 Rigidbody2D:
