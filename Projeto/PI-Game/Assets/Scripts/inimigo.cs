@@ -9,6 +9,7 @@ public class inimigo : MonoBehaviour
     Rigidbody2D ini;
     bool facingRight = false;
     bool noChao = false;
+    public bool NaPlantaforma = false;
     Transform groundCheck;
     Animator ani;
     public float jumpForce = 700;
@@ -21,7 +22,15 @@ public class inimigo : MonoBehaviour
 
     void Update()
     {
-        noChao = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+        if (NaPlantaforma)
+        {
+            noChao = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+        }
+        else
+        {
+            noChao = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("GroundInimigo"));
+        }
+        
         if (plantaforma) {
             if (!noChao) {
                 velocidade *= -1;

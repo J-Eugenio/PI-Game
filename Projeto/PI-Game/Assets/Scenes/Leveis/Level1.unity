@@ -640,7 +640,7 @@ GameObject:
   m_Component:
   - component: {fileID: 153627858}
   - component: {fileID: 153627859}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Parede1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -793,7 +793,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 204839812}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: LimitiDoInimigo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1095,7 +1095,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 347955934}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: LimitiDoInimigo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1836,7 +1836,7 @@ GameObject:
   m_Component:
   - component: {fileID: 530333821}
   - component: {fileID: 530333822}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Parede2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2801,7 +2801,7 @@ GameObject:
   m_Component:
   - component: {fileID: 758654075}
   - component: {fileID: 758654076}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Parede2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3450,7 +3450,7 @@ GameObject:
   m_Component:
   - component: {fileID: 914696863}
   - component: {fileID: 914696864}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Parede1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6353,6 +6353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidade: 2
   plantaforma: 0
+  NaPlantaforma: 0
   jumpForce: 200
 --- !u!95 &1876536359
 Animator:
@@ -7687,6 +7688,11 @@ PrefabInstance:
         type: 3}
       propertyPath: jumpForce
       value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 6355799997088205047, guid: 592beece56a3bd74b848e3dd334c3269,
+        type: 3}
+      propertyPath: NaPlantaforma
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6355799997088205045, guid: 592beece56a3bd74b848e3dd334c3269,
         type: 3}
