@@ -60,7 +60,7 @@ public class inimigo : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D obj) {
         if (obj.gameObject.CompareTag("Player")) {
-            
+            ani.SetTrigger("Morto");
             BoxCollider2D[] boxes = gameObject.GetComponents<BoxCollider2D>();
             foreach(BoxCollider2D box in boxes) {
                 box.enabled = false;

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour {
     Animator anim;
+    Animator animInimigo;
     public float intervaloDeAtaque;
     public float intervaloDeAtaque2;
     private float proximoAtaque;

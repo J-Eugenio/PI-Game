@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6687777020452163146}
   - component: {fileID: 6687777020452163147}
   - component: {fileID: 6687777020452163144}
+  - component: {fileID: 6455105866181615745}
   m_Layer: 0
   m_Name: Inimigo2
   m_TagString: Enemy
@@ -146,6 +147,25 @@ MonoBehaviour:
   plantaforma: 0
   NaPlantaforma: 0
   jumpForce: 700
+--- !u!95 &6455105866181615745
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6687777020452163150}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7e1302a7f21c1fe42bfce9bb32d67e84, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6687777020947653509
 GameObject:
   m_ObjectHideFlags: 0
