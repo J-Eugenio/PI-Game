@@ -4,6 +4,8 @@ using UnityEngine.Audio;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
+
 public class MenuOptions : MonoBehaviour {
     public AudioMixer audioMixer;
     Resolution[] resolutions;
@@ -11,27 +13,20 @@ public class MenuOptions : MonoBehaviour {
     public Slider volume;
     void Start() {
         audioMixer.SetFloat("volume", volume.value);
+        resolucoes.onValueChanged.AddListener(delegate { OnResolutionChange(); });
         resolutions = Screen.resolutions;
-        resolucoes.ClearOptions();
-        List<string> options = new List<string>();
-        int currentResolutionIndex = 0;
-        for(int i = 0; i < resolutions.Length; i++) {
-            if(resolutions[i].width < 800 && resolutions[i].height < 600) {
+        foreach(Resolution resolution in resolutions) {
+            if ((resolution.width < 1152 && resolution.height < 864))
                 continue;
-            }
-            string option = resolutions[i].width + " x " + resolutions[i].height;
-            if(!options.Contains(option))
-            options.Add(option);
-            
-            if(resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height) {
-                currentResolutionIndex = i;
-            }
+            //800 x 600 @ 60Hz
+            resolucoes.options.Add(new Dropdown.OptionData(resolution.ToString()));
         }
-        resolucoes.AddOptions(options);
-        resolucoes.value = currentResolutionIndex;
-        resolucoes.RefreshShownValue();
     }
 
+
+    public void OnResolutionChange() {
+        Screen.SetResolution(resolutions[resolucoes.value].width, resolutions[resolucoes.value].height, Screen.fullScreen);
+    }
 	public void SetVolume() {
         audioMixer.SetFloat("volume", volume.value);
     }
