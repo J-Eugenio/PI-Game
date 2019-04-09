@@ -10330,7 +10330,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpForce: 377
-  respawnPoint: {x: 0, y: 0, z: 0}
 --- !u!114 &1168610814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10343,6 +10342,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d33de78fe46bf1448c4d3765072e685, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lastCheckpoint: {fileID: 0}
+  respawnPoint: {x: 0, y: 0, z: 0}
 --- !u!50 &1168610815
 Rigidbody2D:
   serializedVersion: 4
@@ -11743,7 +11744,7 @@ GameObject:
   - component: {fileID: 1332548581}
   m_Layer: 0
   m_Name: Checkpoint1
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12935,7 +12936,7 @@ GameObject:
   - component: {fileID: 1445619814}
   m_Layer: 0
   m_Name: Checkpoint3
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16660,7 +16661,7 @@ GameObject:
   - component: {fileID: 1914051196}
   m_Layer: 0
   m_Name: Checkpoint2
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
