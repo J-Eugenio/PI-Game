@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
@@ -14,6 +15,7 @@ public class PlayerController : MonoBehaviour {
     private bool noChao = false;
     private Transform groundCheck;
     void Start () {
+        Debug.Log(SceneManager.GetActiveScene().name);
         player = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
         groundCheck = gameObject.transform.Find("GroundCheck");
@@ -27,8 +29,10 @@ public class PlayerController : MonoBehaviour {
             jump = true;
             anim.SetTrigger("Pulo");
         }
+
 	}
 
+    
     void FixedUpdate() {
         float h = Input.GetAxisRaw("Horizontal");
         anim.SetFloat("Velocidade", Mathf.Abs(h));

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - inimigo
   - Enemy
+  - DATA
   layers:
   - Default
   - TransparentFX
