@@ -16,8 +16,6 @@ public class MenuOptions : MonoBehaviour {
         resolucoes.onValueChanged.AddListener(delegate { OnResolutionChange(); });
         resolutions = Screen.resolutions;
         foreach(Resolution resolution in resolutions) {
-            if ((resolution.width < 1152 && resolution.height < 864))
-                continue;
             //800 x 600 @ 60Hz
             resolucoes.options.Add(new Dropdown.OptionData(resolution.ToString()));
         }

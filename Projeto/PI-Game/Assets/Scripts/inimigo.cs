@@ -13,6 +13,7 @@ public class inimigo : MonoBehaviour
     Transform groundCheck;
     Animator ani;
     public float jumpForce = 700;
+
     void Start()
     {
         ini = gameObject.GetComponent<Rigidbody2D>();

@@ -7,6 +7,8 @@ public class PlayerLife : MonoBehaviour
 {
     Animator anim;
     bool vivo = true;
+    public Vector3 respawnPoint;
+
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
@@ -18,8 +20,21 @@ public class PlayerLife : MonoBehaviour
     {
         
     }
-
-    public void PerdeVida() {
+    //setando se ele tocar em alguma tag com o nome ele aparece no reapwan
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        //aqui é para quando ele morre, vir para o check point atual
+        if (other.tag == "")
+        {
+            transform.position = respawnPoint;
+        }
+        //aqui é marcando, se ele chegou no checkpoint, ele salva.
+        if(other.tag == "Checkpoint")
+        {
+            respawnPoint = other.transform.position;
+        }
+    }
+        public void PerdeVida() {
         if (vivo) {
             vivo = false;
             anim.SetTrigger("Morreu");

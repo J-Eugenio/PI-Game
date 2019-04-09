@@ -7,6 +7,7 @@ TagManager:
   - inimigo
   - Enemy
   - DATA
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
