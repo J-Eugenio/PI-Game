@@ -7,14 +7,12 @@ public class CheckPointController : MonoBehaviour
     public Sprite placa;
     public Sprite placaChecada;
     private SpriteRenderer checkpointSpriteRenderer;
-    private bool checkpointChecado;
+
 
 
     void Start()
     {
         checkpointSpriteRenderer = GetComponent<SpriteRenderer>();
-        
-        
     }
 
     
@@ -27,7 +25,7 @@ public class CheckPointController : MonoBehaviour
         if(other.tag == "Player")
         {
             checkpointSpriteRenderer.sprite = placaChecada;
-            checkpointChecado = true;
+         
         }
 
         

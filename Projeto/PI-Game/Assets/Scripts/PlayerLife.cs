@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class PlayerLife : MonoBehaviour
 {
-    public GameObject lastCheckpoint;
     Animator anim;
     bool vivo = true;
-    public Vector3 respawnPoint;
+    public GameObject lastCheckpoint;
+    //public Vector3 respawnPoint;
 
 
     void Start()
@@ -22,25 +22,6 @@ public class PlayerLife : MonoBehaviour
     void Update()
     {
         
-    }
-    // //setando se ele tocar em alguma tag com o nome ele aparece no reapwan
-    //void OnTriggerEnter2D(Collider2D other)
-    // {
-    //aqui é para quando ele morre, vir para o check point atual
-    //if (other.tag == "")
-    // {
-    // transform.position = respawnPoint;
-    // }
-    //aqui é marcando, se ele chegou no checkpoint, ele salva.
-    // if(other.tag == "Checkpoint")
-    // {
-    //  respawnPoint = other.transform.position;
-    //}
-    //}
-
-    private void OnTriggerEnter2D(Collider2D collider2D)
-    {
-        lastCheckpoint = collider2D.gameObject;
     }
 
 
@@ -58,11 +39,9 @@ public class PlayerLife : MonoBehaviour
 
     public void Reset() {
         if(GameManager.gm.GetVidas() >= 0) {
-            gameObject.GetComponent<PlayerAttack>().enabled = true;
-            gameObject.GetComponent<PlayerController>().enabled = true;
-            transform.position = lastCheckpoint.transform.position;
+           SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
-       // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        
+
+
     }
 }
