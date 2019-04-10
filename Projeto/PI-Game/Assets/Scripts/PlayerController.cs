@@ -14,15 +14,26 @@ public class PlayerController : MonoBehaviour {
     private Animator anim;
     private bool noChao = false;
     private Transform groundCheck;
+    private Vector3 posPlayer;
+
     void Start () {
-        Debug.Log(SceneManager.GetActiveScene().name);
+        posPlayer = transform.position;
         player = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
         groundCheck = gameObject.transform.Find("GroundCheck");
-	}
+
+        posPlayer.x = 1;
+
+        transform.position = new Vector3(PlayerData.posX, PlayerData.posY, PlayerData.posZ);
+    }
 	
 	// Update is called once per frame
 	void Update () {
+        PlayerData.posX = transform.position.x;
+        PlayerData.posY = transform.position.y;
+        PlayerData.posZ = transform.position.z;
+        PlayerData.vidas = GameManager.gm.GetVidas();
+        PlayerData.level = SceneManager.GetActiveScene().name;
         noChao = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
 
         if(Input.GetButtonDown("Jump") && noChao) {
@@ -30,7 +41,15 @@ public class PlayerController : MonoBehaviour {
             anim.SetTrigger("Pulo");
         }
 
-	}
+        if (Input.GetKeyDown("s")) {
+            PlayerPrefs.SetString("Level", PlayerData.level);
+            PlayerPrefs.SetFloat("PosX", PlayerData.posX);
+            PlayerPrefs.SetFloat("PosY", PlayerData.posY);
+            PlayerPrefs.SetFloat("PosZ", PlayerData.posZ);
+            PlayerPrefs.SetInt("Vidas", PlayerData.vidas);
+        }
+
+    }
 
     
     void FixedUpdate() {

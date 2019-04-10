@@ -4017,6 +4017,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d33de78fe46bf1448c4d3765072e685, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lastCheckpoint: {fileID: 0}
 --- !u!50 &1168610815
 Rigidbody2D:
   serializedVersion: 4
@@ -5174,7 +5175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010355002302, guid: 4a6e9a7d544412d4d92db88d8587228e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.19
+      value: 2.67
       objectReference: {fileID: 0}
     - target: {fileID: 4000010355002302, guid: 4a6e9a7d544412d4d92db88d8587228e, type: 3}
       propertyPath: m_LocalPosition.y
