@@ -29,11 +29,7 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        PlayerData.posX = transform.position.x;
-        PlayerData.posY = transform.position.y;
-        PlayerData.posZ = transform.position.z;
-        PlayerData.vidas = GameManager.gm.GetVidas();
-        PlayerData.level = SceneManager.GetActiveScene().name;
+        
         noChao = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
 
         if(Input.GetButtonDown("Jump") && noChao) {
@@ -42,6 +38,11 @@ public class PlayerController : MonoBehaviour {
         }
 
         if (Input.GetKeyDown("s")) {
+            PlayerData.posX = transform.position.x;
+            PlayerData.posY = transform.position.y;
+            PlayerData.posZ = transform.position.z;
+            PlayerData.vidas = GameManager.gm.GetVidas();
+            PlayerData.level = SceneManager.GetActiveScene().name;
             PlayerPrefs.SetString("Level", PlayerData.level);
             PlayerPrefs.SetFloat("PosX", PlayerData.posX);
             PlayerPrefs.SetFloat("PosY", PlayerData.posY);
