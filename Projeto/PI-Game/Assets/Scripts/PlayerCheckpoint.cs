@@ -1,12 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PlayerCheckpoint : MonoBehaviour
 {
-    GameManager gm;
-
-    public GameObject lastCheckpoint;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,23 +19,21 @@ public class PlayerCheckpoint : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision2D)
     {
+        PlayerController pController = new PlayerController();
+
         if (collision2D.gameObject.CompareTag("Checkpoint"))
         {
-            lastCheckpoint = collision2D.gameObject;
+            Debug.Log("OK");
+            PlayerData.posX = transform.position.x;
+            PlayerData.posY = transform.position.y;
+            PlayerData.posZ = transform.position.z;
+            PlayerData.vidas = GameManager.gm.GetVidas();
+            PlayerData.level = SceneManager.GetActiveScene().name;
+            PlayerPrefs.SetString("Level", PlayerData.level);
+            PlayerPrefs.SetFloat("PosX", PlayerData.posX);
+            PlayerPrefs.SetFloat("PosY", PlayerData.posY);
+            PlayerPrefs.SetFloat("PosZ", PlayerData.posZ);
+            PlayerPrefs.SetInt("Vidas", PlayerData.vidas);
         }
     }
-
-    private void OnCollisionEnter2D(Collision2D collision2D)
-    {
-        if (collision2D.gameObject.CompareTag("Enemy"))
-        {
-            transform.position = lastCheckpoint.transform.position;
-
-
-        }
-    }
-
-
-
-
 }

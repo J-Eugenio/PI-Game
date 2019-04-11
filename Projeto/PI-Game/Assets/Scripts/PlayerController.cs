@@ -17,12 +17,10 @@ public class PlayerController : MonoBehaviour {
     private Vector3 posPlayer;
 
     void Start () {
-        posPlayer = transform.position;
         player = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
         groundCheck = gameObject.transform.Find("GroundCheck");
 
-        posPlayer.x = 1;
 
         transform.position = new Vector3(PlayerData.posX, PlayerData.posY, PlayerData.posZ);
     }
@@ -38,16 +36,7 @@ public class PlayerController : MonoBehaviour {
         }
 
         if (Input.GetKeyDown("s")) {
-            PlayerData.posX = transform.position.x;
-            PlayerData.posY = transform.position.y;
-            PlayerData.posZ = transform.position.z;
-            PlayerData.vidas = GameManager.gm.GetVidas();
-            PlayerData.level = SceneManager.GetActiveScene().name;
-            PlayerPrefs.SetString("Level", PlayerData.level);
-            PlayerPrefs.SetFloat("PosX", PlayerData.posX);
-            PlayerPrefs.SetFloat("PosY", PlayerData.posY);
-            PlayerPrefs.SetFloat("PosZ", PlayerData.posZ);
-            PlayerPrefs.SetInt("Vidas", PlayerData.vidas);
+            Salvar();
         }
 
     }
@@ -75,5 +64,19 @@ public class PlayerController : MonoBehaviour {
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
+    }
+
+    public void Salvar()
+    {
+        PlayerData.posX = transform.position.x;
+        PlayerData.posY = transform.position.y;
+        PlayerData.posZ = transform.position.z;
+        PlayerData.vidas = GameManager.gm.GetVidas();
+        PlayerData.level = SceneManager.GetActiveScene().name;
+        PlayerPrefs.SetString("Level", PlayerData.level);
+        PlayerPrefs.SetFloat("PosX", PlayerData.posX);
+        PlayerPrefs.SetFloat("PosY", PlayerData.posY);
+        PlayerPrefs.SetFloat("PosZ", PlayerData.posZ);
+        PlayerPrefs.SetInt("Vidas", PlayerData.vidas);
     }
 }

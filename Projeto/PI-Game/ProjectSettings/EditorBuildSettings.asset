@@ -24,6 +24,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Leveis/GameOver.unity
     guid: a5790386b012bdf49ae0dbf5f472c70f
   - enabled: 1
-    path: Assets/Scenes/Glossario.unity
+    path: Assets/Scenes/TelaLeveis.unity
     guid: 06b3e84749619414eb607fbbff28bf2f
+  - enabled: 1
+    path: Assets/Scenes/Leveis/Fase1.unity
+    guid: 7553d336a152d2449951a67d6831a9a8
+  - enabled: 1
+    path: Assets/Scenes/GlossarioPersonagens.unity
+    guid: 146cea8218b54a844a71a77f6e99a721
   m_configObjects: {}
