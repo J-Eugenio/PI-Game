@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour {
 
     public float speed;
     public float jumpForce;
+    public static PlayerController pl;
 
     private Rigidbody2D player;
     private bool facingRight = true;
@@ -79,4 +80,13 @@ public class PlayerController : MonoBehaviour {
         PlayerPrefs.SetFloat("PosZ", PlayerData.posZ);
         PlayerPrefs.SetInt("Vidas", PlayerData.vidas);
     }
+    private void OnTriggerEnter2D(Collider2D velocidade)
+    {
+        if (velocidade.gameObject.CompareTag("velocidade"))
+        {
+            speed = 8;
+            Destroy(velocidade.gameObject);
+        }
+    }
+
 }

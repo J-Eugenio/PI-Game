@@ -6,6 +6,8 @@ using UnityEngine;
 public class PlayerLife : MonoBehaviour
 {
     Animator anim;
+    public int vidas = 0;
+    public int speed = 0;
     bool vivo = true;
     public GameObject lastCheckpoint;
     //public Vector3 respawnPoint;
@@ -41,7 +43,23 @@ public class PlayerLife : MonoBehaviour
         if(GameManager.gm.GetVidas() >= 0) {
            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+    }
 
+    private void OnTriggerEnter2D(Collider2D outro)
+    {
+        if (outro.gameObject.CompareTag("vida"))
+        {
+            GameManager.gm.SetVidas(1);
+            Destroy(outro.gameObject);
+            
+        }
+        if (outro.gameObject.CompareTag("shield"))
+        {
+            vivo = false;
+            gameObject.GetComponent<PlayerAttack>().enabled = true;
+            gameObject.GetComponent<PlayerController>().enabled = true;
+            Destroy(outro.gameObject);
 
+        }
     }
 }

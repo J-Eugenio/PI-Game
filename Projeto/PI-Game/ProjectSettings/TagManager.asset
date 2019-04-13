@@ -8,6 +8,9 @@ TagManager:
   - Enemy
   - DATA
   - Checkpoint
+  - vida
+  - velocidade
+  - shield
   layers:
   - Default
   - TransparentFX
