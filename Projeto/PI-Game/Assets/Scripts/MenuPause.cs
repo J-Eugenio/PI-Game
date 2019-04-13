@@ -34,6 +34,10 @@ public class MenuPause : MonoBehaviour {
         Time.timeScale = 1f;
         SceneManager.LoadScene("MenuPrincipal");
     }
+    public void pulerTutorial()
+    {
+        SceneManager.LoadScene("Fase1");
+    }
 
     public void QuitGame() {
         Application.Quit();
