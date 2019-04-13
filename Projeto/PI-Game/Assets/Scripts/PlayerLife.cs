@@ -47,6 +47,7 @@ public class PlayerLife : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D outro)
     {
+
         if (outro.gameObject.CompareTag("vida"))
         {
             GameManager.gm.SetVidas(1);
