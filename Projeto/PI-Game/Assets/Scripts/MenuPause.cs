@@ -6,6 +6,7 @@ public class MenuPause : MonoBehaviour {
 
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUi;
+    public GameObject TelaWin;
 	// Update is called once per frame
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Escape)) {

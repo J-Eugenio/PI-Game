@@ -11,6 +11,7 @@ TagManager:
   - vida
   - velocidade
   - shield
+  - win
   layers:
   - Default
   - TransparentFX

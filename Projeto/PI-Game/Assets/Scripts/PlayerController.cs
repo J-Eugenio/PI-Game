@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour {
     private Transform groundCheck;
     private Vector3 posPlayer;
     
+    
 
     void Start () {
         if (!GameManager.check) {
@@ -38,6 +39,11 @@ public class PlayerController : MonoBehaviour {
         if(Input.GetButtonDown("Jump") && noChao) {
             jump = true;
             anim.SetTrigger("Pulo");
+        }
+
+        if (GameManager.vida == true && GameManager.escudo == true &&
+            GameManager.velocidade == true && GameManager.win == true) {
+
         }
 
     }
@@ -80,12 +86,23 @@ public class PlayerController : MonoBehaviour {
         PlayerPrefs.SetFloat("PosZ", PlayerData.posZ);
         PlayerPrefs.SetInt("Vidas", PlayerData.vidas);
     }
+    private void RetornaVelocidadeAnterior() {
+        StartCoroutine(VelocidadeAnterior());
+
+    }
+    IEnumerator VelocidadeAnterior() {
+        yield return new WaitForSeconds(5);
+        int VeloAnterior = 5;
+        speed = VeloAnterior;
+    }
     private void OnTriggerEnter2D(Collider2D velocidade)
     {
         if (velocidade.gameObject.CompareTag("velocidade"))
         {
+            GameManager.velocidade = true;
             speed = 8;
             Destroy(velocidade.gameObject);
+            RetornaVelocidadeAnterior();
         }
         
     }

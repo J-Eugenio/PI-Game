@@ -8,7 +8,6 @@ public class PlayerLife : MonoBehaviour
 {
     Animator anim;
     public int vidas = 0;
-    public int speed = 0;
     bool vivo = true;
     public GameObject lastCheckpoint;
     
@@ -18,8 +17,7 @@ public class PlayerLife : MonoBehaviour
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
-        GameManager.gm.AtualizaHud();
-        
+        GameManager.gm.AtualizaHud();       
     }
 
     // Update is called once per frame
@@ -27,17 +25,27 @@ public class PlayerLife : MonoBehaviour
     {
         
     }
+    private void RemoverEscudo() {
+        StartCoroutine(ReEscudo());
 
+    }
+    IEnumerator ReEscudo() {
+        yield return new WaitForSeconds(5);
+        GameManager.shield = false;
+    }
     public void PerdeVida() {
         if (vivo) {
-            vivo = false;
-            anim.SetTrigger("Morreu");
-            GameManager.gm.SetVidas(-1);
-            gameObject.GetComponent<PlayerAttack>().enabled = false;
-            gameObject.GetComponent<PlayerController>().enabled = false;
-
-        }
-        
+            if (!GameManager.shield) {
+                vivo = false;
+                anim.SetTrigger("Morreu");
+                GameManager.gm.SetVidas(-1);
+                gameObject.GetComponent<PlayerAttack>().enabled = false;
+                gameObject.GetComponent<PlayerController>().enabled = false;
+            } else {
+                RemoverEscudo();
+                Debug.Log("OK");
+            }
+        }    
     }
 
     public void Reset() {
@@ -45,35 +53,27 @@ public class PlayerLife : MonoBehaviour
            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
-    private void RetornaVidaAnterior() {
-        StartCoroutine(VidaAnterior());
-        
-    }
-    IEnumerator VidaAnterior() {
-        yield return new WaitForSeconds(5);
-        int vidaAnterior = 2;
-        GameManager.gm.IncVidas(vidaAnterior);
-    }
+
     private void OnTriggerEnter2D(Collider2D outro)
     {
         
 
         if (outro.gameObject.CompareTag("vida"))
         {
+            GameManager.vida = true;
             GameManager.gm.SetVidas(1);
             Destroy(outro.gameObject);
-            RetornaVidaAnterior();
-
-
-
         }
         if (outro.gameObject.CompareTag("shield"))
         {
-            vivo = false;
+            GameManager.escudo = true;
+            GameManager.shield = true;
             gameObject.GetComponent<PlayerAttack>().enabled = true;
             gameObject.GetComponent<PlayerController>().enabled = true;
             Destroy(outro.gameObject);
-
+        }
+        if (outro.gameObject.CompareTag("win")) {
+            GameManager.win = true;    
         }
     }
 }

@@ -8,6 +8,7 @@ public class TimerCount : MonoBehaviour
 {
 
     public Text Timer;
+    public bool isTimer = true;
     private float startTime;
 
         
@@ -20,12 +21,15 @@ public class TimerCount : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float t = Time.time - startTime;
+        if (isTimer) {
+            float t = Time.time - startTime;
 
-        string minutes = ((int)t / 60).ToString();
-        string seconds = (t % 60).ToString("f2");
+            string minutes = ((int)t / 60).ToString();
+            string seconds = (t % 60).ToString("f2");
 
-        Timer.text = minutes + ":" + seconds;
+            Timer.text = minutes + ":" + seconds;
+            //GameObject.Find("txtScore").GetComponent<Text>().text = Timer.text;
+        }
         
     }
 }
