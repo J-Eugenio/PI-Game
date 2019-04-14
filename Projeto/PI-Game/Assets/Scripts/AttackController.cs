@@ -23,7 +23,8 @@ public class AttackController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Enemy")) {
-            
+            GameManager.gm.AddinimigosMortos(1);
+            GameManager.gm.AddScore(1, 100);
             other.gameObject.GetComponent<inimigo>().enabled = false;
             BoxCollider2D[] boxes = other.gameObject.GetComponents<BoxCollider2D>();
             foreach(BoxCollider2D box in boxes) {

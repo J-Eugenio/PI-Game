@@ -31,19 +31,16 @@ public class PlayerLife : MonoBehaviour
     }
     IEnumerator ReEscudo() {
         yield return new WaitForSeconds(5);
-        GameManager.shield = false;
+        GameManager.gm.SetShield(false);
     }
     public void PerdeVida() {
         if (vivo) {
-            if (!GameManager.shield) {
+            if (!GameManager.gm.GetShield()) {
                 vivo = false;
                 anim.SetTrigger("Morreu");
                 GameManager.gm.SetVidas(-1);
                 gameObject.GetComponent<PlayerAttack>().enabled = false;
                 gameObject.GetComponent<PlayerController>().enabled = false;
-            } else {
-                RemoverEscudo();
-                Debug.Log("OK");
             }
         }    
     }
@@ -60,20 +57,21 @@ public class PlayerLife : MonoBehaviour
 
         if (outro.gameObject.CompareTag("vida"))
         {
-            GameManager.vida = true;
+            GameManager.gm.SetVida(true);
             GameManager.gm.SetVidas(1);
             Destroy(outro.gameObject);
         }
         if (outro.gameObject.CompareTag("shield"))
         {
-            GameManager.escudo = true;
-            GameManager.shield = true;
+            GameManager.gm.SetShield(true);
+            GameManager.gm.SetEscudo(true);
+            RemoverEscudo();
             gameObject.GetComponent<PlayerAttack>().enabled = true;
             gameObject.GetComponent<PlayerController>().enabled = true;
             Destroy(outro.gameObject);
         }
         if (outro.gameObject.CompareTag("win")) {
-            GameManager.win = true;    
+            GameManager.gm.SetWin(true);
         }
     }
 }

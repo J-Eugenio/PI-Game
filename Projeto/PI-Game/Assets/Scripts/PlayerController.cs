@@ -16,8 +16,9 @@ public class PlayerController : MonoBehaviour {
     private bool noChao = false;
     private Transform groundCheck;
     private Vector3 posPlayer;
-    
-    
+    public GameObject TelaWin;
+
+
 
     void Start () {
         if (!GameManager.check) {
@@ -41,8 +42,11 @@ public class PlayerController : MonoBehaviour {
             anim.SetTrigger("Pulo");
         }
 
-        if (GameManager.vida == true && GameManager.escudo == true &&
-            GameManager.velocidade == true && GameManager.win == true) {
+        if (GameManager.gm.GetVida() == true && GameManager.gm.GetEscudo() == true &&
+            GameManager.gm.GetVelocidade() == true && GameManager.gm.GetWin() == true) {        
+            TelaWin.SetActive(true);
+            GameManager.isTimer = false;
+            GameManager.gm.AttHudScore();
 
         }
 
@@ -99,7 +103,7 @@ public class PlayerController : MonoBehaviour {
     {
         if (velocidade.gameObject.CompareTag("velocidade"))
         {
-            GameManager.velocidade = true;
+            GameManager.gm.SetVelocidade(true);
             speed = 8;
             Destroy(velocidade.gameObject);
             RetornaVelocidadeAnterior();

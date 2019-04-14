@@ -61,8 +61,8 @@ public class inimigo : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D obj) {
         if (obj.gameObject.CompareTag("Player")) {
-            GameManager.NumeroInimigosMortos += 1;
-            GameManager.ScoreInimigosMortos += 100;
+            GameManager.gm.AddinimigosMortos(1);
+            GameManager.gm.AddScore(1, 100);
             ani.SetTrigger("Morto");
             BoxCollider2D[] boxes = gameObject.GetComponents<BoxCollider2D>();
             foreach(BoxCollider2D box in boxes) {
