@@ -10358,7 +10358,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &826688630
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10613,7 +10613,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &844588611
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13173,6 +13173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpForce: 370
+  TelaWin: {fileID: 826688629}
 --- !u!114 &1168610814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13283,7 +13284,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Timer: {fileID: 2090104129}
-  isTimer: 1
 --- !u!114 &1168610821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16788,13 +16788,17 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013234968400, guid: 4a6e9a7d544412d4d92db88d8587228e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010355002302, guid: 4a6e9a7d544412d4d92db88d8587228e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 236.8
+      value: 54.65
       objectReference: {fileID: 0}
     - target: {fileID: 4000010355002302, guid: 4a6e9a7d544412d4d92db88d8587228e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.7
+      value: 9.07
       objectReference: {fileID: 0}
     - target: {fileID: 4000010355002302, guid: 4a6e9a7d544412d4d92db88d8587228e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17907,7 +17911,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1574197828
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19998,7 +20002,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUi: {fileID: 798477483}
-  TelaWin: {fileID: 0}
 --- !u!1 &1833167189
 GameObject:
   m_ObjectHideFlags: 0
@@ -22625,6 +22628,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54245620547f66e4a934a0fa5abb847c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shield: 0
+  vida: 0
+  escudo: 0
+  velocidade: 0
+  win: 0
+  ScoreTotal: 0
+  nInimigos: 0
 --- !u!4 &1991090447
 Transform:
   m_ObjectHideFlags: 0
@@ -23141,7 +23151,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2035549395}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: b501940d51fbb6f409657b19607fe7b0,
     type: 2}
@@ -24427,7 +24437,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2124078297}
   - component: {fileID: 2124078296}
-  m_Layer: 0
+  - component: {fileID: 2124078298}
+  m_Layer: 5
   m_Name: Win
   m_TagString: win
   m_Icon: {fileID: 0}
@@ -24496,6 +24507,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &2124078298
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124078295}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.65
 --- !u!1 &2125808403
 GameObject:
   m_ObjectHideFlags: 0
