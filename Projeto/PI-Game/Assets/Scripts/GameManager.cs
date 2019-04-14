@@ -7,7 +7,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager gm;
-
+    public static bool check = false;
     private int vidas = 2;
 
     void Awake()
@@ -29,6 +29,10 @@ public class GameManager : MonoBehaviour
     
     public void Addvidas(int vidas) {
         this.vidas = vidas;
+    }
+    public void IncVidas(int vida) {
+        vidas = vida;
+        AtualizaHud();
     }
     public void SetVidas(int vida) {
         vidas += vida;

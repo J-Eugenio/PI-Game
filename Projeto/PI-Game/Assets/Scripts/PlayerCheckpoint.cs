@@ -19,11 +19,8 @@ public class PlayerCheckpoint : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision2D)
     {
-        PlayerController pController = new PlayerController();
-
         if (collision2D.gameObject.CompareTag("Checkpoint"))
         {
-            Debug.Log("OK");
             PlayerData.posX = transform.position.x;
             PlayerData.posY = transform.position.y;
             PlayerData.posZ = transform.position.z;
@@ -34,6 +31,7 @@ public class PlayerCheckpoint : MonoBehaviour
             PlayerPrefs.SetFloat("PosY", PlayerData.posY);
             PlayerPrefs.SetFloat("PosZ", PlayerData.posZ);
             PlayerPrefs.SetInt("Vidas", PlayerData.vidas);
+            GameManager.check = true;
         }
     }
 }

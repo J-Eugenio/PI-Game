@@ -503,7 +503,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1604391798}
-        m_MethodName: Jogar
+        m_MethodName: CarregarJogo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

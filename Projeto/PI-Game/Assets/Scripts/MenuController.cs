@@ -13,15 +13,29 @@ public class MenuController : MonoBehaviour {
     public void Jogar() {
         StartCoroutine(carregarScena());
     }
+    public void CarregarJogo() {
+        StartCoroutine(Carregar());
+    }
     public void Options() {
         StartCoroutine(carregarOptions());
+    }
+    public void VoltarIni() {
+        StartCoroutine(carregarVoltarIni());
     }
     public void Voltar() {
         StartCoroutine(carregarVoltar());
     }
+    public void IrGlossario() {
+        StartCoroutine(Glossario());
+    }
     IEnumerator carregarScena() {
         yield return new WaitForSeconds(0);
-        SceneManager.LoadScene("Level1");
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene("Tutorial");
+    }
+    IEnumerator Carregar() {
+        yield return new WaitForSeconds(0);
+        SceneManager.LoadScene("TelaSaves");
     }
     IEnumerator carregarOptions() {
         yield return new WaitForSeconds(0);
@@ -30,5 +44,13 @@ public class MenuController : MonoBehaviour {
     IEnumerator carregarVoltar() {
         yield return new WaitForSeconds(0);
         SceneManager.LoadScene("MenuPrincipal");
+    }
+    IEnumerator carregarVoltarIni() {
+        yield return new WaitForSeconds(0);
+        SceneManager.LoadScene("MenuPrincipal");
+    }
+    IEnumerator Glossario() {
+        yield return new WaitForSeconds(0);
+        SceneManager.LoadScene("TelaGlossario");
     }
 }

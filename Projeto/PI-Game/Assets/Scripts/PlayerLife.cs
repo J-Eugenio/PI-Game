@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
+
 public class PlayerLife : MonoBehaviour
 {
     Animator anim;
@@ -10,6 +11,7 @@ public class PlayerLife : MonoBehaviour
     public int speed = 0;
     bool vivo = true;
     public GameObject lastCheckpoint;
+    
     //public Vector3 respawnPoint;
 
 
@@ -25,7 +27,6 @@ public class PlayerLife : MonoBehaviour
     {
         
     }
-
 
     public void PerdeVida() {
         if (vivo) {
@@ -44,15 +45,27 @@ public class PlayerLife : MonoBehaviour
            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
-
+    private void RetornaVidaAnterior() {
+        StartCoroutine(VidaAnterior());
+        
+    }
+    IEnumerator VidaAnterior() {
+        yield return new WaitForSeconds(5);
+        int vidaAnterior = 2;
+        GameManager.gm.IncVidas(vidaAnterior);
+    }
     private void OnTriggerEnter2D(Collider2D outro)
     {
+        
 
         if (outro.gameObject.CompareTag("vida"))
         {
             GameManager.gm.SetVidas(1);
             Destroy(outro.gameObject);
-            
+            RetornaVidaAnterior();
+
+
+
         }
         if (outro.gameObject.CompareTag("shield"))
         {

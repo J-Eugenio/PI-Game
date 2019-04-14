@@ -629,6 +629,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 7.9105787
       objectReference: {fileID: 0}
+    - target: {fileID: 1316591093458256126, guid: 36949305b39ef9049ac898ce7d495580,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.45879167
+      objectReference: {fileID: 0}
     - target: {fileID: 1316591093458256125, guid: 36949305b39ef9049ac898ce7d495580,
         type: 3}
       propertyPath: m_Points.Array.size
@@ -793,11 +798,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Points.Array.data[0].y
       value: 0.46220198
-      objectReference: {fileID: 0}
-    - target: {fileID: 1316591093458256126, guid: 36949305b39ef9049ac898ce7d495580,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.45879167
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36949305b39ef9049ac898ce7d495580, type: 3}
@@ -3624,6 +3624,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 1.7032228
       objectReference: {fileID: 0}
+    - target: {fileID: 1316591093458256126, guid: 36949305b39ef9049ac898ce7d495580,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.26606873
+      objectReference: {fileID: 0}
     - target: {fileID: 1316591093458256125, guid: 36949305b39ef9049ac898ce7d495580,
         type: 3}
       propertyPath: m_Points.Array.size
@@ -3758,11 +3763,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Points.Array.data[14].y
       value: 0.42919037
-      objectReference: {fileID: 0}
-    - target: {fileID: 1316591093458256126, guid: 36949305b39ef9049ac898ce7d495580,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.26606873
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36949305b39ef9049ac898ce7d495580, type: 3}
@@ -6882,6 +6882,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 4.469973
       objectReference: {fileID: 0}
+    - target: {fileID: 1316591093458256123, guid: 36949305b39ef9049ac898ce7d495580,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1316591093458256125, guid: 36949305b39ef9049ac898ce7d495580,
         type: 3}
       propertyPath: m_Points.Array.size
@@ -7086,11 +7091,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Points.Array.data[19].y
       value: 0.40188402
-      objectReference: {fileID: 0}
-    - target: {fileID: 1316591093458256123, guid: 36949305b39ef9049ac898ce7d495580,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36949305b39ef9049ac898ce7d495580, type: 3}
@@ -14548,11 +14548,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010355002302, guid: 4a6e9a7d544412d4d92db88d8587228e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 58.79
+      value: 1.55
       objectReference: {fileID: 0}
     - target: {fileID: 4000010355002302, guid: 4a6e9a7d544412d4d92db88d8587228e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.68
+      value: -0.49
       objectReference: {fileID: 0}
     - target: {fileID: 4000010355002302, guid: 4a6e9a7d544412d4d92db88d8587228e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15121,7 +15121,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1818315318}
-        m_MethodName: QuitGame
+        m_MethodName: LoadMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

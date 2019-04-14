@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuPrincipal.unity
     guid: 4cb121264a54788419c653204e9dd8df
   - enabled: 1
-    path: Assets/Scenes/Leveis/Level1.unity
+    path: Assets/Scenes/Leveis/Tutorial.unity
     guid: 0c8ddebf858ace64ebe12c4683f109f8
   - enabled: 1
     path: Assets/Scenes/MenuOptions.unity
@@ -32,4 +32,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GlossarioPersonagens.unity
     guid: 146cea8218b54a844a71a77f6e99a721
+  - enabled: 1
+    path: Assets/Scenes/TelaSaves.unity
+    guid: 86edfaf14b6437d4ea7210d72d836861
+  - enabled: 1
+    path: Assets/Scenes/TelaGlossario.unity
+    guid: 2b8dd82ef8466e04b9a393b6eaec7548
+  - enabled: 1
+    path: Assets/Scenes/GlossarioItens.unity
+    guid: 022896d405e621f4bbabeb99304555d4
+  - enabled: 1
+    path: Assets/Scenes/GlossarioJogo.unity
+    guid: 04cd7c9195d3fef46b3851d37fd75d69
   m_configObjects: {}
