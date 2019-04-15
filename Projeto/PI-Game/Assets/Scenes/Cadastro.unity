@@ -1229,8 +1229,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.1, y: 1.6}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -5.6, y: 0}
+  m_SizeDelta: {x: 174.82, y: 45.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &495087714
 MonoBehaviour:
@@ -1252,7 +1252,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Login
+  m_text: Cadastro
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6975c02d17d872d4295fbaaf319f790f, type: 2}
   m_sharedMaterial: {fileID: 21312554974210636, guid: 6975c02d17d872d4295fbaaf319f790f,
@@ -1281,11 +1281,11 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 50
+  m_fontSize: 45.4
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
+  m_fontSizeMin: 17
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_textAlignment: 258
@@ -1322,7 +1322,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -56.329895, w: 0}
   m_textInfo:
     textComponent: {fileID: 0}
-    characterCount: 5
+    characterCount: 8
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
