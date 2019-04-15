@@ -97,7 +97,7 @@ public class PlayerController : MonoBehaviour {
 
     }
     IEnumerator VelocidadeAnterior() {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(8);
         int VeloAnterior = 5;
         speed = VeloAnterior;
     }
