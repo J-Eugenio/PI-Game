@@ -30,7 +30,9 @@ public class MenuController : MonoBehaviour {
     }
     IEnumerator carregarScena() {
         yield return new WaitForSeconds(0);
-        PlayerPrefs.DeleteAll();
+        PlayerData.posX = 2.61f;
+        PlayerData.posY = -0.79f;
+        PlayerData.posZ = 0.09f;
         SceneManager.LoadScene("Tutorial");
     }
     IEnumerator Carregar() {

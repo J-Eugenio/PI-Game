@@ -28,8 +28,9 @@ public class PlayerController : MonoBehaviour {
         anim = gameObject.GetComponent<Animator>();
         groundCheck = gameObject.transform.Find("GroundCheck");
 
-
         transform.position = new Vector3(PlayerData.posX, PlayerData.posY, PlayerData.posZ);
+
+        
     }
 	
 	// Update is called once per frame
@@ -49,6 +50,7 @@ public class PlayerController : MonoBehaviour {
             GameManager.gm.AttHudScore();
 
         }
+
 
     }
 

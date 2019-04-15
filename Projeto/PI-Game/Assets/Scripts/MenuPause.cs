@@ -47,7 +47,11 @@ public class MenuPause : MonoBehaviour {
 
     public void ReiniciarPartida() {
         Time.timeScale = 1f;
-        GameManager.gm.Addvidas(2);
+        GameManager.gm.Addvidas(PlayerPrefs.GetInt("Vidas"));
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void telaLeveis() {
+        SceneManager.LoadScene("TelaLeveis");
     }
 }
