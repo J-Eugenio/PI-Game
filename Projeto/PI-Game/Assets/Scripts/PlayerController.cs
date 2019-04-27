@@ -4,12 +4,10 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
-    //valor novo, qualquer coisa tira esse valor e deixa so speed
-    public float speed = 40f;
+
+    public float speed;
     public float jumpForce;
     public static PlayerController pl;
-    //objeto
-    public Joystick joystick;
 
     private Rigidbody2D player;
     private bool facingRight = true;
@@ -19,8 +17,6 @@ public class PlayerController : MonoBehaviour {
     private Transform groundCheck;
     private Vector3 posPlayer;
     public GameObject TelaWin;
-    //novo tipo, qualquer coisa so apagar
-    float horizontal = 0f;
 
 
 
@@ -33,7 +29,6 @@ public class PlayerController : MonoBehaviour {
         groundCheck = gameObject.transform.Find("GroundCheck");
 
         transform.position = new Vector3(PlayerData.posX, PlayerData.posY, PlayerData.posZ);
-
 
         
     }
@@ -63,19 +58,6 @@ public class PlayerController : MonoBehaviour {
     void FixedUpdate() {
         float h = Input.GetAxisRaw("Horizontal");
         anim.SetFloat("Velocidade", Mathf.Abs(h));
-
-        //função do joystick, qualquer coisa so apagar do if ate o else 
-        if(joystick.Horizontal >= .2f)
-        {
-            horizontal = speed;
-        }else if(joystick.Horizontal <= -.2f)
-        {
-            horizontal = speed;
-        }
-        else
-        {
-            horizontal = 0f;
-        }
 
         player.velocity = new Vector2(h * speed, player.velocity.y);
         if (h > 0 && !facingRight) {
