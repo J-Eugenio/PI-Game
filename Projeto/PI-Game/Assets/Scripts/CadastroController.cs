@@ -18,7 +18,7 @@ public class CadastroController : MonoBehaviour {
     private Text FeedBackMsgCad = null;
 
 
-    private string urlCadastro = "http://localhost/pi/controle/cadastro.php";
+    private string urlCadastro = "http://game-pi.000webhostapp.com/pi/pi/controle/cadastro.php";
 
 
     void Start() {
@@ -38,8 +38,8 @@ public class CadastroController : MonoBehaviour {
             string idade = idadeField.text;
             string usuario = usuarioField.text;
             string senha = senhaField.text;
-
-            WWW www = new WWW(urlCadastro + "?nome=" + nome + "&sobrenome=" + sobrenome + "&idade=" + idade + "&login=" + usuario + "&senha=" + senha);
+            string token = "YdTiqQBetWWdZXVzOP5M";
+            WWW www = new WWW(urlCadastro + "?nome=" + nome + "&sobrenome=" + sobrenome + "&idade=" + idade + "&login=" + usuario + "&senha=" + senha + "&token=" + token);
             StartCoroutine(ValidaCadastro(www));
         }
     }

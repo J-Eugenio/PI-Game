@@ -16,7 +16,7 @@ public class LoginController : MonoBehaviour {
     [SerializeField]
     private Toggle LembrarDados = null;
 
-    private string urlLogin = "http://localhost/pi/controle/login.php";
+    private string urlLogin = "http://game-pi.000webhostapp.com/pi/pi/controle/login.php";
 
     void Start () {
 		if(PlayerPrefs.HasKey("lembra") && PlayerPrefs.GetInt("lembra") == 1) {
@@ -37,14 +37,14 @@ public class LoginController : MonoBehaviour {
         } else {
             string usuario = usuarioF.text;
             string senha = senhaF.text;
-
+            string token = "YdTiqQBetWWdZXVzOP5M";
             if (LembrarDados.isOn) {
                 PlayerPrefs.SetInt("lembra", 1);
                 PlayerPrefs.SetString("rememberLogin", usuario);
                 PlayerPrefs.SetString("rememberPass", senha);
             }
 
-            WWW www = new WWW (urlLogin + "?login=" + usuario + "&senha=" + senha );
+            WWW www = new WWW (urlLogin + "?login=" + usuario + "&senha=" + senha + "&token=" + token);
             StartCoroutine(ValidaLogin(www));
         }
     }
