@@ -12,6 +12,8 @@ TagManager:
   - velocidade
   - shield
   - win
+  - DATA2
+  - DATA3
   layers:
   - Default
   - TransparentFX
