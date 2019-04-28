@@ -2673,7 +2673,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180551552}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 107.64, y: -6.29, z: 0}
+  m_LocalPosition: {x: 107.64, y: -8.72, z: 0}
   m_LocalScale: {x: 300.3431, y: 23.37553, z: 1}
   m_Children:
   - {fileID: 189424673}
@@ -9248,7 +9248,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 718976307}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 110.04, y: -13.4, z: 0}
+  m_LocalPosition: {x: 110.04, y: -14.85, z: 0}
   m_LocalScale: {x: 294.89337, y: 23.37553, z: 1}
   m_Children:
   - {fileID: 127486749}
@@ -13975,7 +13975,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpForce: 280
+  jumpForce: 200
   joystick: {fileID: 453708903}
   TelaWin: {fileID: 826688629}
 --- !u!114 &1168610814
@@ -16426,7 +16426,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 24dfa9000757d2a48ac0e18b23865cbc, type: 3}
   m_Color: {r: 0.6981132, g: 0.6551667, b: 0.43796724, a: 1}
   m_FlipX: 0
