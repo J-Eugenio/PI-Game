@@ -644,6 +644,18 @@ Transform:
   m_Father: {fileID: 522402912}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &129102219 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252,
+    type: 3}
+  m_PrefabInstance: {fileID: 208409004}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &131072019
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -967,7 +979,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1168610819}
         m_MethodName: attack2
         m_Mode: 1
         m_Arguments:
@@ -4823,7 +4835,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpForce: 377
-  joystick: {fileID: 0}
+  joystick: {fileID: 129102219}
   TelaWin: {fileID: 0}
 --- !u!114 &1168610814
 MonoBehaviour:
@@ -5508,7 +5520,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1168610819}
         m_MethodName: attack1
         m_Mode: 1
         m_Arguments:
