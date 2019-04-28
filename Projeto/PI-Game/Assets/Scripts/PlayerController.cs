@@ -39,8 +39,8 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
         
         noChao = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
-
-        if(Input.GetButtonDown("Jump") && noChao) {
+        float jumpJ = joystick.Vertical;
+        if(jumpJ >= .5f && noChao) {
             jump = true;
             anim.SetTrigger("Pulo");
         }
@@ -62,6 +62,13 @@ public class PlayerController : MonoBehaviour {
         anim.SetFloat("Velocidade", Mathf.Abs(h));
 
         player.velocity = new Vector2(h * speed, player.velocity.y);
+        //if (joystick.Horizontal >= .2f) {
+        //    player.velocity = new Vector2(h * speed, player.velocity.y);
+        //} else if (joystick.Horizontal <= -.2f) {
+        //    player.velocity = new Vector2(h * speed, player.velocity.y);
+        //} else {
+        //    player.velocity = new Vector2(0, player.velocity.y);
+        //}
         if (h > 0 && !facingRight) {
             Flip();
         } else if (h < 0 && facingRight) {
