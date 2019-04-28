@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour {
     public float jumpForce;
     public static PlayerController pl;
 
+    public Joystick joystick;
+
     private Rigidbody2D player;
     private bool facingRight = true;
     private bool jump = false;
@@ -56,7 +58,7 @@ public class PlayerController : MonoBehaviour {
 
     
     void FixedUpdate() {
-        float h = Input.GetAxisRaw("Horizontal");
+        float h = joystick.Horizontal;
         anim.SetFloat("Velocidade", Mathf.Abs(h));
 
         player.velocity = new Vector2(h * speed, player.velocity.y);
