@@ -15,13 +15,18 @@ public class PlayerAttack : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetButtonDown("Fire1") && Time.time > proximoAtaque) {
+
+    }
+    public void attack1() {
+        if (Time.time > proximoAtaque) {
             Atacando();
-        }else if (Input.GetButtonDown("Fire2") && Time.time > proximoAtaque) {
+        }
+    }
+    public void attack2() {
+        if (Time.time > proximoAtaque) {
             Atacando2();
         }
     }
-
     void Atacando() {
         anim.SetTrigger("Ataque");
         proximoAtaque = Time.time + intervaloDeAtaque;
