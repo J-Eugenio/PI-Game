@@ -59,9 +59,16 @@ public class PlayerController : MonoBehaviour {
     
     void FixedUpdate() {
         float h = joystick.Horizontal;
-        anim.SetFloat("Velocidade", Mathf.Abs(h));
+        if(h > 0) {
+            anim.SetBool("Velocidade", true);
+        }else if (h < 0) {
+            anim.SetBool("Velocidade", true);
+        }
+        if (h == 0) {
+            anim.SetBool("Velocidade", false);
+        }
 
-        player.velocity = new Vector2(h * speed, player.velocity.y);
+            player.velocity = new Vector2(h * speed, player.velocity.y);
         //if (joystick.Horizontal >= .2f) {
         //    player.velocity = new Vector2(h * speed, player.velocity.y);
         //} else if (joystick.Horizontal <= -.2f) {
