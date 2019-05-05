@@ -41,6 +41,15 @@ public class GameManager : MonoBehaviour
     public void AddScore(int inimigosMortos, int ScoreInimigo) {
         this.ScoreTotal += (inimigosMortos * ScoreInimigo);
     }
+    public void AddScorePuzzle(int nTentativas) {
+        if(nTentativas == 8) {
+            this.ScoreTotal += 1000;
+        }else if (nTentativas > 8 && nTentativas < 15) {
+            this.ScoreTotal += 500;
+        } else {
+            this.ScoreTotal += 200;
+        }    
+    }
     public void Addvidas(int vidas) {
         this.vidas = vidas;
     }
