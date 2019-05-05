@@ -24,7 +24,7 @@ public class DialogoController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.touchCount > 0 && falaAtiva)
+        if(Input.GetMouseButtonDown(0) && falaAtiva)
         {
             if (falas.respostas.Length > 0)
                 MostrarRespostas();
@@ -32,7 +32,7 @@ public class DialogoController : MonoBehaviour
             else
             {
                 falaAtiva = false;
-                painelDeDialogo.gameObject.SetActive(false);
+                painelDeDialogo.SetActive(false);
                 falaJogo.gameObject.SetActive(false);
                 FindObjectOfType<PlayerController>().speed = 5;
             }
@@ -59,7 +59,7 @@ public class DialogoController : MonoBehaviour
         LimparRespostas();
 
         falaAtiva = true;
-        painelDeDialogo.gameObject.SetActive(true);
+        painelDeDialogo.SetActive(true);
         falaJogo.gameObject.SetActive(true);
 
         falaJogo.text = falas.fala;
