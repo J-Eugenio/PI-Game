@@ -70,7 +70,7 @@ public class DialogoController : MonoBehaviour
         AnswerButton[] buttons = FindObjectsOfType<AnswerButton>();
         foreach(AnswerButton button in buttons)
         {
-            Destroy(button.gameObject);
+           Destroy(button.gameObject);
         }
     }
 }

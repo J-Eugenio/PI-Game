@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Dialogo : MonoBehaviour{
 
-    public FalaJogo[] falas = new FalaJogo[2];
+    public FalaJogo[] falas = new FalaJogo[3];
 
     private bool dialogoConcluido = false;
 
@@ -28,6 +28,8 @@ public class Dialogo : MonoBehaviour{
         if (other.CompareTag("Player"))
         {
             other.GetComponent<PlayerController>().speed = 0;
+            
+
             if (!dialogoConcluido)
             {
                 dialogoController.ProximaFala(falas[0]);

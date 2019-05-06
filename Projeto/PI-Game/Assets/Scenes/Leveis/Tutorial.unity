@@ -9149,7 +9149,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0000009536743, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -9160,7 +9160,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.302124, y: 1.89}
+  m_Size: {x: 1.6386738, y: 1.89}
   m_EdgeRadius: 0
 --- !u!212 &2041164333
 SpriteRenderer:
@@ -9223,8 +9223,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   falas:
-  - {fileID: 11400000, guid: de904c6c5ea5ba142872590948fc3431, type: 2}
   - {fileID: 11400000, guid: c2429eeb00b49004493f98f99f1f6f3f, type: 2}
+  - {fileID: 11400000, guid: de904c6c5ea5ba142872590948fc3431, type: 2}
 --- !u!1 &2041577628
 GameObject:
   m_ObjectHideFlags: 0
