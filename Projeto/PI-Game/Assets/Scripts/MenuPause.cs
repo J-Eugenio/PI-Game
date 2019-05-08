@@ -6,8 +6,8 @@ public class MenuPause : MonoBehaviour {
 
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUi;
-    public int vidas = 0;
-    PlayerLife pl;
+  
+    
 
 	// Update is called once per frame
 	void Update () {
@@ -40,9 +40,6 @@ public class MenuPause : MonoBehaviour {
     public void pulerTutorial()
     {
         SceneManager.LoadScene("Fase1");
-        pl.vidas = 2;
-        
-        
     }
 
     public void QuitGame() {
