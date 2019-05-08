@@ -40,6 +40,9 @@ public class MenuPause : MonoBehaviour {
     public void pulerTutorial()
     {
         SceneManager.LoadScene("Fase1");
+        GameManager.gm.SetVidas(-1);
+
+
     }
 
     public void QuitGame() {
