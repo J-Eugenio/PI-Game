@@ -431,7 +431,7 @@ Transform:
   m_LocalScale: {x: 1.142, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 522402912}
-  m_RootOrder: 45
+  m_RootOrder: 44
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &9741421
 PrefabInstance:
@@ -824,6 +824,7 @@ GameObject:
   - component: {fileID: 35280165}
   - component: {fileID: 35280164}
   - component: {fileID: 35280163}
+  - component: {fileID: 35280166}
   m_Layer: 0
   m_Name: Checkpoint (2)
   m_TagString: Checkpoint
@@ -843,7 +844,7 @@ Transform:
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 522402912}
-  m_RootOrder: 42
+  m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &35280163
 MonoBehaviour:
@@ -872,7 +873,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.020032883, y: 0.27033186}
+  m_Offset: {x: -0.0036849976, y: 0.04148197}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -883,7 +884,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0892296, y: 0.82869625}
+  m_Size: {x: 1.5796356, y: 1.8094807}
   m_EdgeRadius: 0
 --- !u!212 &35280165
 SpriteRenderer:
@@ -933,6 +934,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &35280166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35280161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00ddd33eae28b5148a72170d47ccd942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: "Assar\xE9"
+    sentences:
+    - "Pareceu que o jovem estava bem determinado, ele provavelmente tinha algum prop\xF3sito."
+    - "Ele citou um poema, embora passar por tristesa.\t"
+    - "\"Eu sou de uma terra que o povo padece, mas n\xE3o esmorece e procura vencer,
+      da terra querida, que a linda cabocla, de riso na boca zomba do sofrer,"
+    - "N\xE3o nego meu sangue, n\xE3o nego meu nome, olho para a fome, pergunto: o
+      que h\xE1? Eu sou Brasileiro, filho do nordeste,"
+    - "Sou cabra da Peste, Sou do Cear\xE1\""
+    - 'Mas ele escondeu algo mas a frente, a placa esta dizendo o caminho, siga em
+      frente, ele deve ter deixado algo.
+
+'
 --- !u!1001 &37713560
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3292,12 +3319,12 @@ PrefabInstance:
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 180
+      value: 182
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 143
+      value: 166
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
@@ -4330,6 +4357,81 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &355779306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 355779307}
+  - component: {fileID: 355779309}
+  - component: {fileID: 355779308}
+  m_Layer: 0
+  m_Name: Dialogo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &355779307
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355779306}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -24.714, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 522402912}
+  m_RootOrder: 51
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &355779308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355779306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00ddd33eae28b5148a72170d47ccd942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: "Assar\xE9"
+    sentences:
+    - Veja, mais um item, essa Chinela aumenta a velocidade por um tempo determinado.
+    - "Bom que voc\xEA ir\xE1 acelerar hehe, cuidado Jogador!\n"
+--- !u!61 &355779309
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355779306}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &360215754
 GameObject:
   m_ObjectHideFlags: 0
@@ -6818,7 +6920,7 @@ Transform:
   m_LocalScale: {x: 2.0252922, y: 2.3983514, z: 1}
   m_Children: []
   m_Father: {fileID: 522402912}
-  m_RootOrder: 50
+  m_RootOrder: 49
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &492681150
 PrefabInstance:
@@ -7248,7 +7350,6 @@ Transform:
   - {fileID: 570927861}
   - {fileID: 1886723224}
   - {fileID: 823971335}
-  - {fileID: 1973486552}
   - {fileID: 35280162}
   - {fileID: 1773561365}
   - {fileID: 1098938494}
@@ -7259,6 +7360,7 @@ Transform:
   - {fileID: 565471251}
   - {fileID: 491852149}
   - {fileID: 940051812}
+  - {fileID: 355779307}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7498,7 +7600,7 @@ Transform:
   m_LocalScale: {x: 0.437026, y: 0.39734182, z: 1}
   m_Children: []
   m_Father: {fileID: 522402912}
-  m_RootOrder: 49
+  m_RootOrder: 48
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &565471252
 BoxCollider2D:
@@ -12621,7 +12723,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 522402912}
-  m_RootOrder: 51
+  m_RootOrder: 50
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &940051813
 MonoBehaviour:
@@ -13732,7 +13834,7 @@ Transform:
   m_LocalScale: {x: 0.28076142, y: 0.33021817, z: 1}
   m_Children: []
   m_Father: {fileID: 522402912}
-  m_RootOrder: 44
+  m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1098938495
 BoxCollider2D:
@@ -17504,13 +17606,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Player
+    name: "Assar\xE9"
     sentences:
-    - "Este \xE9 o checkpoint da fase, quando voc\xEA alcan\xE7ar uma plaquinha dessas
-      no decorrer da fase, salvara seu estado.\t"
-    - "De certa forma quando voc\xEA morrer, ir\xE1 voltar para a ultima plaquinha
-      na qual foi marcada."
-    - "Ent\xE3o n\xE3o esque\xE7a nenhuma delas!\n"
+    - "Antes do garoto sumir, ele deixou essas placas, elas salvam seu estado, para
+      que n\xE3o volte ao inicio da fase novamente."
+    - "Ele tamb\xE9m recitou outro poema, que mostrava esperan\xE7a para um jovem
+      triste."
+    - "\"Meus versos \xE9 como semente\nQue Nasce arriba do ch\xE3o;\nN\xE3o tenho
+      estudo nem arte\nA minha rima faz parte\nDas obras de cria\xE7\xE3o\""
+    - "Ei olha, uma caba\xE7a, essa caba\xE7a ela lhe dara vida, para poder seguir
+      em frente."
+    - Tome cuidado jogador!
 --- !u!1 &1421405010
 GameObject:
   m_ObjectHideFlags: 0
@@ -20207,7 +20313,7 @@ Transform:
   m_LocalScale: {x: 0.42835587, y: 0.3747744, z: 1}
   m_Children: []
   m_Father: {fileID: 522402912}
-  m_RootOrder: 47
+  m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1614589320
 BoxCollider2D:
@@ -21731,11 +21837,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1773561364}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.7, y: -11.92, z: 0.94331354}
+  m_LocalPosition: {x: 56.68, y: -17.58, z: 0.94331354}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 522402912}
-  m_RootOrder: 43
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1773561366
 MonoBehaviour:
@@ -21764,7 +21870,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.020032883, y: 0.27033186}
+  m_Offset: {x: -0.052734375, y: 0.09052038}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -21775,7 +21881,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0892296, y: 0.82869625}
+  m_Size: {x: 1.6777039, y: 1.7114019}
   m_EdgeRadius: 0
 --- !u!212 &1773561368
 SpriteRenderer:
@@ -22185,7 +22291,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUi: {fileID: 798477483}
-  vidas: 0
 --- !u!1 &1833167189
 GameObject:
   m_ObjectHideFlags: 0
@@ -24269,7 +24374,7 @@ Transform:
   m_LocalScale: {x: 1.142, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 522402912}
-  m_RootOrder: 46
+  m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1957689332
 GameObject:
@@ -24627,86 +24732,6 @@ PrefabInstance:
       objectReference: {fileID: 6200000, guid: cb1268bd327c3654e80d80de06f64ab7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36949305b39ef9049ac898ce7d495580, type: 3}
---- !u!1001 &1973486551
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 522402912}
-    m_Modifications:
-    - target: {fileID: 6684622797451934454, guid: 9066a9ac09580b146ba59f440225c34f,
-        type: 3}
-      propertyPath: m_Name
-      value: Pedra (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6684622797451934451, guid: 9066a9ac09580b146ba59f440225c34f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 56.050003
-      objectReference: {fileID: 0}
-    - target: {fileID: 6684622797451934451, guid: 9066a9ac09580b146ba59f440225c34f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -18.039999
-      objectReference: {fileID: 0}
-    - target: {fileID: 6684622797451934451, guid: 9066a9ac09580b146ba59f440225c34f,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.8866271
-      objectReference: {fileID: 0}
-    - target: {fileID: 6684622797451934451, guid: 9066a9ac09580b146ba59f440225c34f,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6684622797451934451, guid: 9066a9ac09580b146ba59f440225c34f,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6684622797451934451, guid: 9066a9ac09580b146ba59f440225c34f,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6684622797451934451, guid: 9066a9ac09580b146ba59f440225c34f,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6684622797451934451, guid: 9066a9ac09580b146ba59f440225c34f,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 41
-      objectReference: {fileID: 0}
-    - target: {fileID: 6684622797451934451, guid: 9066a9ac09580b146ba59f440225c34f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6684622797451934451, guid: 9066a9ac09580b146ba59f440225c34f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6684622797451934451, guid: 9066a9ac09580b146ba59f440225c34f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6684622797451934452, guid: 9066a9ac09580b146ba59f440225c34f,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9066a9ac09580b146ba59f440225c34f, type: 3}
---- !u!4 &1973486552 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6684622797451934451, guid: 9066a9ac09580b146ba59f440225c34f,
-    type: 3}
-  m_PrefabInstance: {fileID: 1973486551}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1978557784
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26966,7 +26991,7 @@ Transform:
   m_LocalScale: {x: 1.369, y: 1.336, z: 1}
   m_Children: []
   m_Father: {fileID: 522402912}
-  m_RootOrder: 48
+  m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &2124078298
 CircleCollider2D:
