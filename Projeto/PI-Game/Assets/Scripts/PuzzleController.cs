@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class PuzzleController : MonoBehaviour
 {
-    public GameObject Barreira;
-    public GameObject puzzle1;
+    public GameObject puzzle;
+    public GameObject puzzleController;
+    public GameObject BonusPuzzle;
 
     [SerializeField]
     private Sprite bgImage;
@@ -101,8 +102,10 @@ public class PuzzleController : MonoBehaviour
             Debug.Log("Game Finished");
             Debug.Log("Voce fez " + countGuesses + " tentativas para completar o jogo");
             GameManager.gm.AddScorePuzzle(countGuesses);
-            Barreira.SetActive(false);
-            puzzle1.SetActive(false);
+            puzzle.SetActive(false);
+            puzzleController.SetActive(false);
+            Destroy(BonusPuzzle);
+            
         }
     }
 

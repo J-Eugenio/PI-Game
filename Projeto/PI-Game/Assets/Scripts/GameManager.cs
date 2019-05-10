@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
         this.ScoreTotal += (inimigosMortos * ScoreInimigo);
     }
     public void AddScorePuzzle(int nTentativas) {
-        if(nTentativas == 8) {
+        if(nTentativas <= 8) {
             this.ScoreTotal += 1000;
         }else if (nTentativas > 8 && nTentativas < 15) {
             this.ScoreTotal += 500;
