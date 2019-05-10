@@ -5,6 +5,7 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour {
 
 	public Dialogue dialogue;
+    public GameObject showPuzzles;
 
 	public void TriggerDialogue ()
 	{
@@ -16,6 +17,8 @@ public class DialogueTrigger : MonoBehaviour {
         if (other.CompareTag("Player"))
         {
             TriggerDialogue();
+
+            showPuzzles.SetActive(true);
         }
 
 

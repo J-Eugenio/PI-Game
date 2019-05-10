@@ -7860,7 +7860,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUi: {fileID: 798477483}
-  vidas: 0
 --- !u!1 &1883891363
 GameObject:
   m_ObjectHideFlags: 0
@@ -9026,13 +9025,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Thiago
+    name: "Assar\xE9"
     sentences:
     - "Ol\xE1 jogador, seja bem vindo ao nosso jogo, este no qual fizemos para voc\xEA
       se divertir."
     - "Este \xE9 o nosso tutorial, onde aqui temos alguns inimigos e itens, onde voc\xEA
       ir\xE1 coletar no decorrer das fases."
     - "Espero que goste, e se divirta, mas preste aten\xE7\xE3o hehe!"
+  showPuzzles: {fileID: 0}
 --- !u!1 &2041577628
 GameObject:
   m_ObjectHideFlags: 0
@@ -9329,6 +9329,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2688192726289638809, guid: 0a36e874e62b3954487f01996c2fb973,
+        type: 3}
+      propertyPath: nameText
+      value: 
+      objectReference: {fileID: 1887273873}
+    - target: {fileID: 2688192726289638809, guid: 0a36e874e62b3954487f01996c2fb973,
+        type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 34835645}
+    - target: {fileID: 2688192726289638809, guid: 0a36e874e62b3954487f01996c2fb973,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 879702192}
     - target: {fileID: 2688192726289638806, guid: 0a36e874e62b3954487f01996c2fb973,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9384,21 +9399,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2688192726289638809, guid: 0a36e874e62b3954487f01996c2fb973,
-        type: 3}
-      propertyPath: nameText
-      value: 
-      objectReference: {fileID: 1887273873}
-    - target: {fileID: 2688192726289638809, guid: 0a36e874e62b3954487f01996c2fb973,
-        type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 34835645}
-    - target: {fileID: 2688192726289638809, guid: 0a36e874e62b3954487f01996c2fb973,
-        type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 879702192}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a36e874e62b3954487f01996c2fb973, type: 3}
 --- !u!1001 &5041503185982280573

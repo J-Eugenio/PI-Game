@@ -960,6 +960,7 @@ MonoBehaviour:
       frente, ele deve ter deixado algo.
 
 '
+  showPuzzles: {fileID: 0}
 --- !u!1001 &37713560
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1511,6 +1512,116 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &79771207
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 396330858}
+    m_Modifications:
+    - target: {fileID: 8503967328027844295, guid: f319a14b2f4ce2c46be9595c1a797d2e,
+        type: 3}
+      propertyPath: m_Name
+      value: piso (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8507360111048278789, guid: f319a14b2f4ce2c46be9595c1a797d2e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 265.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 8507360111048278789, guid: f319a14b2f4ce2c46be9595c1a797d2e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 8507360111048278789, guid: f319a14b2f4ce2c46be9595c1a797d2e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8507360111048278789, guid: f319a14b2f4ce2c46be9595c1a797d2e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0008617265
+      objectReference: {fileID: 0}
+    - target: {fileID: 8507360111048278789, guid: f319a14b2f4ce2c46be9595c1a797d2e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.014734509
+      objectReference: {fileID: 0}
+    - target: {fileID: 8507360111048278789, guid: f319a14b2f4ce2c46be9595c1a797d2e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.000012665122
+      objectReference: {fileID: 0}
+    - target: {fileID: 8507360111048278789, guid: f319a14b2f4ce2c46be9595c1a797d2e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9998911
+      objectReference: {fileID: 0}
+    - target: {fileID: 8507360111048278789, guid: f319a14b2f4ce2c46be9595c1a797d2e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8507360111048278789, guid: f319a14b2f4ce2c46be9595c1a797d2e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.09900001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8507360111048278789, guid: f319a14b2f4ce2c46be9595c1a797d2e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -1.6890001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8507360111048278789, guid: f319a14b2f4ce2c46be9595c1a797d2e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8507360111048278789, guid: f319a14b2f4ce2c46be9595c1a797d2e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.1833527
+      objectReference: {fileID: 0}
+    - target: {fileID: 8507360111048278789, guid: f319a14b2f4ce2c46be9595c1a797d2e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.4944732
+      objectReference: {fileID: 0}
+    - target: {fileID: 8507360111048278789, guid: f319a14b2f4ce2c46be9595c1a797d2e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 8503144162104919350, guid: f319a14b2f4ce2c46be9595c1a797d2e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 8503144162104919350, guid: f319a14b2f4ce2c46be9595c1a797d2e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8503144162104919351, guid: f319a14b2f4ce2c46be9595c1a797d2e,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8426986097298374405, guid: f319a14b2f4ce2c46be9595c1a797d2e,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f319a14b2f4ce2c46be9595c1a797d2e, type: 3}
+--- !u!4 &79771208 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8507360111048278789, guid: f319a14b2f4ce2c46be9595c1a797d2e,
+    type: 3}
+  m_PrefabInstance: {fileID: 79771207}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &80745962 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1316591093458256124, guid: 36949305b39ef9049ac898ce7d495580,
@@ -4405,6 +4516,7 @@ MonoBehaviour:
     sentences:
     - Veja, mais um item, essa Chinela aumenta a velocidade por um tempo determinado.
     - "Bom que voc\xEA ir\xE1 acelerar hehe, cuidado Jogador!\n"
+  showPuzzles: {fileID: 0}
 --- !u!61 &355779309
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5443,6 +5555,7 @@ Transform:
   - {fileID: 637092381}
   - {fileID: 1363604843}
   - {fileID: 1016566441}
+  - {fileID: 79771208}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7219,6 +7332,7 @@ Transform:
   - {fileID: 565471251}
   - {fileID: 940051812}
   - {fileID: 355779307}
+  - {fileID: 1850191400}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7315,7 +7429,7 @@ PrefabInstance:
     - target: {fileID: 6684622797451934451, guid: 9066a9ac09580b146ba59f440225c34f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 104.06
+      value: 107.49
       objectReference: {fileID: 0}
     - target: {fileID: 6684622797451934451, guid: 9066a9ac09580b146ba59f440225c34f,
         type: 3}
@@ -12576,7 +12690,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 940051811}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -145.03, y: -17.75, z: 0}
+  m_LocalPosition: {x: -146.81, y: -17.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 522402912}
@@ -12604,6 +12718,7 @@ MonoBehaviour:
     - "Ele aparentava um pouco triste, e depois disso sumiu, e come\xE7ou a aparecer
       monstros, ser\xE1 que tem algo haver com o sumi\xE7o?"
     - Tome Cuidado Jogador!
+  showPuzzles: {fileID: 0}
 --- !u!61 &940051814
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14680,8 +14795,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177144172}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 123.01, y: 5, z: 4.5965624}
-  m_LocalScale: {x: 23.528564, y: 4.3317237, z: 0.95}
+  m_LocalPosition: {x: 125.385, y: 5, z: 4.5965624}
+  m_LocalScale: {x: 23.906147, y: 4.3317237, z: 0.95}
   m_Children: []
   m_Father: {fileID: 396330858}
   m_RootOrder: 10
@@ -16607,11 +16722,12 @@ MonoBehaviour:
   dialogue:
     name: "Assar\xE9"
     sentences:
-    - "Se voc\xEA chegou at\xE9 aqui, ent\xE3o os it\xE9ns especiais que o jovem deixou,
-      lhe serviu bem, salvou voc\xEA desses monstros."
+    - "Antes do jovem sumir, ele tentou se esconder, mas acabou n\xE3o conseguindo,
+      e ele levava muitas coisas nas m\xE3os."
     - "Ele escondeu alguma coisa por aqui, algo que fizesse lembrar o que ele deixou
       para voc\xEA."
     - "Veja que esta placa, est\xE1 apontando para uma dire\xE7\xE3o, siga ela!"
+  showPuzzles: {fileID: 1452284725}
 --- !u!61 &1363604845
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17601,6 +17717,7 @@ MonoBehaviour:
     - "Ei olha, uma caba\xE7a, essa caba\xE7a ela lhe dara vida, para poder seguir
       em frente."
     - Tome cuidado jogador!
+  showPuzzles: {fileID: 0}
 --- !u!1 &1421405010
 GameObject:
   m_ObjectHideFlags: 0
@@ -17992,7 +18109,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1452284726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18507,7 +18624,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010355002302, guid: 4a6e9a7d544412d4d92db88d8587228e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 189.4
+      value: 0.95
       objectReference: {fileID: 0}
     - target: {fileID: 4000010355002302, guid: 4a6e9a7d544412d4d92db88d8587228e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -20236,7 +20353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.6431373}
+  m_Color: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 0.6431373}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -21943,7 +22060,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1773561364}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 56.68, y: -17.58, z: 0.94331354}
+  m_LocalPosition: {x: 70.89, y: -16.07, z: 0.94331354}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 522402912}
@@ -22050,8 +22167,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: 
-    sentences: []
+    name: "Assar\xE9"
+    sentences:
+    - "Voc\xEA p\xF4de perceber que o jovem recitou v\xE1rios poemas, e isso o fez
+      er esperan\xE7a, mas antes ele recitou um outro poema e logo em seguida ele
+      sumiu,"
+    - "\"Saudade dentro do peito\r\n\xC9 qual fogo de monturo\r\nPor fora tudo perfeito,\r\nPor
+      dentro fazendo furo."
+    - "H\xE1 dor que mata a pessoa\r\nSem d\xF3 e sem piedade,\r\nPor\xE9m n\xE3o
+      h\xE1 dor que doa\r\nComo a dor de uma saudade."
+    - "Saudade \xE9 um aperreio\r\nPra quem na vida gozou,\r\n\xC9 um grande saco
+      cheio\r\nDaquilo que j\xE1 passou."
+    - "Saudade \xE9 canto magoado\r\nNo cora\xE7\xE3o de quem sente\r\n\xC9 como a
+      voz do passado\r\nEcoando no presente"
+    - "Ele andava com um chapeu, at\xE9 ele deixa-lo cair... Espera, acho que tem
+      algo la em cima, mas tem inimigos e n\xE3o consigo ver, cuidado jogador."
+  showPuzzles: {fileID: 0}
 --- !u!4 &1778578820 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6684622797451934451, guid: 9066a9ac09580b146ba59f440225c34f,
@@ -22473,6 +22604,84 @@ Transform:
   m_Father: {fileID: 522402912}
   m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1850191399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1850191400}
+  - component: {fileID: 1850191402}
+  - component: {fileID: 1850191401}
+  m_Layer: 0
+  m_Name: DialogoMonstros
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1850191400
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850191399}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -134.2, y: -15.67, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 522402912}
+  m_RootOrder: 51
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1850191401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850191399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00ddd33eae28b5148a72170d47ccd942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: "Assar\xE9"
+    sentences:
+    - "Uma dica, o jogo possui dois tipos de monstros, um guerreiro drag\xE3o, e um
+      soldadinho simp\xE1tico mas que pode ser perigoso.\t"
+    - "N\xE3o aconselhamos a voc\xEA pular em cima do soldadinho, ele n\xE3o gosta
+      muito hehe."
+  showPuzzles: {fileID: 0}
+--- !u!61 &1850191402
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850191399}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1001 &1859127608
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22813,7 +23022,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1882658000}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: cb1268bd327c3654e80d80de06f64ab7, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -24794,7 +25003,7 @@ PrefabInstance:
     - target: {fileID: 6684622797451934451, guid: 9066a9ac09580b146ba59f440225c34f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 108.54001
+      value: 112.9
       objectReference: {fileID: 0}
     - target: {fileID: 6684622797451934451, guid: 9066a9ac09580b146ba59f440225c34f,
         type: 3}
@@ -26779,6 +26988,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2108302232}
   - component: {fileID: 2108302231}
+  - component: {fileID: 2108302233}
   m_Layer: 0
   m_Name: Pad_3_3 (3)
   m_TagString: Untagged
@@ -26848,6 +27058,32 @@ Transform:
   m_Father: {fileID: 522402912}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: -0.47800002, y: 1.013, z: 91.021}
+--- !u!61 &2108302233
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108302230}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: cb1268bd327c3654e80d80de06f64ab7, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.18, y: 1.13}
+    newSize: {x: 4.18, y: 1.13}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.18, y: 1.13}
+  m_EdgeRadius: 0
 --- !u!1 &2111803026 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1316591093458256122, guid: 36949305b39ef9049ac898ce7d495580,
@@ -26954,7 +27190,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2124078295}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 106.32001, y: -17.369999, z: 0.94331354}
+  m_LocalPosition: {x: 110.29, y: -17.369999, z: 0.94331354}
   m_LocalScale: {x: 1.369, y: 1.336, z: 1}
   m_Children: []
   m_Father: {fileID: 522402912}
