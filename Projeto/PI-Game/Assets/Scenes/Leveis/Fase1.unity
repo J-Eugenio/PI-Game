@@ -14591,6 +14591,10 @@ MonoBehaviour:
   jumpForce: 350
   joystick: {fileID: 453708903}
   TelaWin: {fileID: 826688629}
+  Stars:
+  - {fileID: 2085119211}
+  - {fileID: 844588610}
+  - {fileID: 1574197827}
 --- !u!114 &1168610814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26591,7 +26595,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2085119212
 RectTransform:
   m_ObjectHideFlags: 0

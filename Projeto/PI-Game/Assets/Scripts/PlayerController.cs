@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour {
     private Transform groundCheck;
     private Vector3 posPlayer;
     public GameObject TelaWin;
+    public GameObject[] Stars = new GameObject[3];
 
 
 
@@ -45,6 +46,23 @@ public class PlayerController : MonoBehaviour {
         if (GameManager.gm.GetVida() == true && GameManager.gm.GetEscudo() == true &&
             GameManager.gm.GetVelocidade() == true && GameManager.gm.GetWin() == true) {        
             TelaWin.SetActive(true);
+            if(GameManager.gm.ScoreTotal >= 2500) {
+                Stars[0].SetActive(true);
+                Stars[1].SetActive(true);
+                Stars[2].SetActive(true);
+            }else if (GameManager.gm.ScoreTotal >= 1800 && GameManager.gm.ScoreTotal < 2500) {
+                Stars[0].SetActive(true);
+                Stars[1].SetActive(true);
+                Stars[2].SetActive(false);
+            }else if (GameManager.gm.ScoreTotal >= 1000 && GameManager.gm.ScoreTotal < 1800) {
+                Stars[0].SetActive(true);
+                Stars[1].SetActive(false);
+                Stars[2].SetActive(false);
+            } else {
+                Stars[0].SetActive(false);
+                Stars[1].SetActive(false);
+                Stars[2].SetActive(false);
+            }
             GameManager.isTimer = false;
             GameManager.gm.AttHudScore();
 
