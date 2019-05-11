@@ -961,6 +961,7 @@ MonoBehaviour:
 
 '
   showPuzzles: {fileID: 0}
+  nExec: 1
 --- !u!1001 &37713560
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4517,6 +4518,7 @@ MonoBehaviour:
     - Veja, mais um item, essa Chinela aumenta a velocidade por um tempo determinado.
     - "Bom que voc\xEA ir\xE1 acelerar hehe, cuidado Jogador!\n"
   showPuzzles: {fileID: 0}
+  nExec: 1
 --- !u!61 &355779309
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12719,6 +12721,7 @@ MonoBehaviour:
       monstros, ser\xE1 que tem algo haver com o sumi\xE7o?"
     - Tome Cuidado Jogador!
   showPuzzles: {fileID: 0}
+  nExec: 1
 --- !u!61 &940051814
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16728,6 +16731,7 @@ MonoBehaviour:
       para voc\xEA."
     - "Veja que esta placa, est\xE1 apontando para uma dire\xE7\xE3o, siga ela!"
   showPuzzles: {fileID: 1452284725}
+  nExec: 1
 --- !u!61 &1363604845
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17718,6 +17722,7 @@ MonoBehaviour:
       em frente."
     - Tome cuidado jogador!
   showPuzzles: {fileID: 0}
+  nExec: 1
 --- !u!1 &1421405010
 GameObject:
   m_ObjectHideFlags: 0
@@ -18624,7 +18629,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010355002302, guid: 4a6e9a7d544412d4d92db88d8587228e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.95
+      value: 2.53
       objectReference: {fileID: 0}
     - target: {fileID: 4000010355002302, guid: 4a6e9a7d544412d4d92db88d8587228e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -21750,6 +21755,21 @@ PrefabInstance:
       propertyPath: NaPlantaforma
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6355799997088205044, guid: 592beece56a3bd74b848e3dd334c3269,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6355799997088205044, guid: 592beece56a3bd74b848e3dd334c3269,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6355799997088205044, guid: 592beece56a3bd74b848e3dd334c3269,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 592beece56a3bd74b848e3dd334c3269, type: 3}
 --- !u!1001 &1768639317
@@ -22183,6 +22203,7 @@ MonoBehaviour:
     - "Ele andava com um chapeu, at\xE9 ele deixa-lo cair... Espera, acho que tem
       algo la em cima, mas tem inimigos e n\xE3o consigo ver, cuidado jogador."
   showPuzzles: {fileID: 0}
+  nExec: 1
 --- !u!4 &1778578820 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6684622797451934451, guid: 9066a9ac09580b146ba59f440225c34f,
@@ -22656,6 +22677,7 @@ MonoBehaviour:
     - "N\xE3o aconselhamos a voc\xEA pular em cima do soldadinho, ele n\xE3o gosta
       muito hehe."
   showPuzzles: {fileID: 0}
+  nExec: 1
 --- !u!61 &1850191402
 BoxCollider2D:
   m_ObjectHideFlags: 0
