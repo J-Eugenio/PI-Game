@@ -13,6 +13,7 @@ TagManager:
   - shield
   - win
   - PuzzleButton
+  - InimigoAtaque
   layers:
   - Default
   - TransparentFX
