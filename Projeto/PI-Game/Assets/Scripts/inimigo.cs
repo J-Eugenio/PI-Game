@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class inimigo : MonoBehaviour
 {
+    public bool attack = false;
     public float velocidade;
     public bool plantaforma = false;
     Rigidbody2D ini;
@@ -73,6 +74,9 @@ public class inimigo : MonoBehaviour
             velocidade = 0;
             transform.Rotate(new Vector3(0, 0, -180));
             Destroy(gameObject, 3);
+        }
+        if (obj.gameObject.CompareTag("InimigoAtaque")) {
+            Debug.Log("OK");
         }
     }
 
