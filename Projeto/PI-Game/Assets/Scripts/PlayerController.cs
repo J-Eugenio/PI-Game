@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour {
     public float jumpForce;
     public static PlayerController pl;
 
-    public Joystick joystick;
 
     private Rigidbody2D player;
     private bool facingRight = true;
@@ -79,18 +78,10 @@ public class PlayerController : MonoBehaviour {
             anim.SetTrigger("Pulo");
         }
     }
-    void FixedUpdate() {
-        float h = joystick.Horizontal;
-        if(h > 0) {
-            anim.SetBool("Velocidade", true);
-        }else if (h < 0) {
-            anim.SetBool("Velocidade", true);
-        }
-        if (h == 0) {
-            anim.SetBool("Velocidade", false);
-        }
 
-            player.velocity = new Vector2(h * speed, player.velocity.y);
+    void FixedUpdate() {
+
+            
         //if (joystick.Horizontal >= .2f) {
         //    player.velocity = new Vector2(h * speed, player.velocity.y);
         //} else if (joystick.Horizontal <= -.2f) {
@@ -98,11 +89,11 @@ public class PlayerController : MonoBehaviour {
         //} else {
         //    player.velocity = new Vector2(0, player.velocity.y);
         //}
-        if (h > 0 && !facingRight) {
-            Flip();
-        } else if (h < 0 && facingRight) {
-            Flip();
-        }
+        //if (h > 0 && !facingRight) {
+        //    Flip();
+        //} else if (h < 0 && facingRight) {
+        //    Flip();
+        //}
 
         if (jump) {
             player.AddForce(new Vector2(0, jumpForce));
@@ -150,5 +141,26 @@ public class PlayerController : MonoBehaviour {
         }
         
     }
-
+    public void FrenteDown() {
+        if(player.transform.localScale.x < 0) {
+            Flip();
+        }
+        player.velocity = new Vector2(1 * speed, player.velocity.y);
+        anim.SetBool("Velocidade", true);
+    }
+    public void FrenteUp() {
+        player.velocity = new Vector2(0 * speed, player.velocity.y);
+        anim.SetBool("Velocidade", false);
+    }
+    public void TrazDown() {
+        if (player.transform.localScale.x > 0) {
+            Flip();
+        }
+        player.velocity = new Vector2(-1 * speed, player.velocity.y);
+        anim.SetBool("Velocidade", true);
+    }
+    public void TrazUp() {
+        player.velocity = new Vector2(0 * speed, player.velocity.y);
+        anim.SetBool("Velocidade", false);
+    }
 }

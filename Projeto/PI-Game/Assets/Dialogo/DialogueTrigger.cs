@@ -7,6 +7,7 @@ public class DialogueTrigger : MonoBehaviour {
 	public Dialogue dialogue;
     public GameObject showPuzzles;
     public int nExec = 1;
+    public bool AtivarPuzzle = false;
 
 	public void TriggerDialogue ()
 	{
@@ -19,7 +20,9 @@ public class DialogueTrigger : MonoBehaviour {
         {
             nExec = 0;
             TriggerDialogue();
-            showPuzzles.SetActive(true);
+            if (AtivarPuzzle) {
+                showPuzzles.SetActive(true);
+            }
         }
 
 
