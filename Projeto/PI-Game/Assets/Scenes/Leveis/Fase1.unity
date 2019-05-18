@@ -10884,7 +10884,7 @@ RectTransform:
   - {fileID: 1375261644}
   - {fileID: 51073480}
   m_Father: {fileID: 1818315317}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -16767,7 +16767,7 @@ MonoBehaviour:
     - "Veja que esta placa, est\xE1 apontando para uma dire\xE7\xE3o, siga ela!"
   showPuzzles: {fileID: 1452284725}
   nExec: 1
-  AtivarPuzzle: 0
+  AtivarPuzzle: 1
 --- !u!61 &1363604845
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18833,7 +18833,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010355002302, guid: 4a6e9a7d544412d4d92db88d8587228e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.72
+      value: 0.93
       objectReference: {fileID: 0}
     - target: {fileID: 4000010355002302, guid: 4a6e9a7d544412d4d92db88d8587228e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -22671,8 +22671,8 @@ RectTransform:
   - {fileID: 678099129}
   - {fileID: 1105280980}
   - {fileID: 1601863231}
-  - {fileID: 267439}
   - {fileID: 798477484}
+  - {fileID: 267439}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -26998,7 +26998,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -141, y: 525}
+  m_AnchoredPosition: {x: -143, y: 579.2}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2090104129
