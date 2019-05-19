@@ -2674,12 +2674,12 @@ PrefabInstance:
     - target: {fileID: 1316591093458256124, guid: 36949305b39ef9049ac898ce7d495580,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 52.9
+      value: 53.46
       objectReference: {fileID: 0}
     - target: {fileID: 1316591093458256124, guid: 36949305b39ef9049ac898ce7d495580,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.37
+      value: 14.36
       objectReference: {fileID: 0}
     - target: {fileID: 1316591093458256124, guid: 36949305b39ef9049ac898ce7d495580,
         type: 3}
@@ -2956,7 +2956,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180551552}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 107.64, y: -8.72, z: 0}
+  m_LocalPosition: {x: 114.72, y: -5.71, z: 0}
   m_LocalScale: {x: 300.3431, y: 23.37553, z: 1}
   m_Children:
   - {fileID: 189424673}
@@ -2975,7 +2975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2069546ba9d954f8eda6aabf09d71c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 0.01
+  velocidade: 0.001
   backgroud: {fileID: 180551556}
 --- !u!64 &180551555
 MeshCollider:
@@ -9660,7 +9660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2069546ba9d954f8eda6aabf09d71c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 0.01
+  velocidade: 0.001
   backgroud: {fileID: 718976311}
 --- !u!64 &718976310
 MeshCollider:
@@ -14707,7 +14707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpForce: 350
+  jumpForce: 380
   TelaWin: {fileID: 826688629}
   Stars:
   - {fileID: 2085119211}
@@ -14812,8 +14812,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3188eb57855aff4484b9ee1b9839c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intervaloDeAtaque: 1.7
-  intervaloDeAtaque2: 0.6
+  intervaloDeAtaque: 1
+  intervaloDeAtaque2: 0.3
 --- !u!114 &1168610820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14924,8 +14924,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177144172}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 125.385, y: 5, z: 4.5965624}
-  m_LocalScale: {x: 23.906147, y: 4.3317237, z: 0.95}
+  m_LocalPosition: {x: 125.385, y: 9.115, z: 4.5965624}
+  m_LocalScale: {x: 23.906147, y: 5.475299, z: 0.95}
   m_Children: []
   m_Father: {fileID: 396330858}
   m_RootOrder: 10
@@ -27846,12 +27846,12 @@ PrefabInstance:
     - target: {fileID: 1316591093458256124, guid: 36949305b39ef9049ac898ce7d495580,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 49.41
+      value: 49.43
       objectReference: {fileID: 0}
     - target: {fileID: 1316591093458256124, guid: 36949305b39ef9049ac898ce7d495580,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.54
+      value: 15.68
       objectReference: {fileID: 0}
     - target: {fileID: 1316591093458256124, guid: 36949305b39ef9049ac898ce7d495580,
         type: 3}
