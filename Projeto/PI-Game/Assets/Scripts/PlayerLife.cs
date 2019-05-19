@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using UnityEngine;
 
 
@@ -9,7 +10,8 @@ public class PlayerLife : MonoBehaviour
     Animator anim;
     public int vidas = 0;
     bool vivo = true;
-    public GameObject lastCheckpoint;
+    [SerializeField]
+    private Button direita, esquerda, atack1, atack2, pulo;
     
     //public Vector3 respawnPoint;
 
@@ -36,11 +38,16 @@ public class PlayerLife : MonoBehaviour
     public void PerdeVida() {
         if (vivo) {
             if (!GameManager.gm.GetShield()) {
+                gameObject.GetComponent<PlayerAttack>().enabled = false;
+                gameObject.GetComponent<PlayerController>().enabled = false;
+                direita.interactable = false;
+                esquerda.interactable = false;
+                pulo.interactable = false;
+                atack1.interactable = false;
+                atack2.interactable = false;
                 vivo = false;
                 anim.SetTrigger("Morreu");
                 GameManager.gm.SetVidas(-1);
-                gameObject.GetComponent<PlayerAttack>().enabled = false;
-                gameObject.GetComponent<PlayerController>().enabled = false;
             }
         }    
     }
