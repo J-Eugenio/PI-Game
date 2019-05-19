@@ -10,7 +10,7 @@ public class PuzzleController : MonoBehaviour
     public GameObject BonusPuzzle;
 
     [SerializeField]
-    private Sprite bgImage;
+    private Sprite[] bgImage;
     public Sprite[] puzzles;
     public List<Sprite> gamePuzzles = new List<Sprite>();
     public List<Button> btns = new List<Button>();
@@ -34,13 +34,26 @@ public class PuzzleController : MonoBehaviour
     }
     void GetButtons() {
         GameObject[] objects = GameObject.FindGameObjectsWithTag("PuzzleButton");
-
+        int index = 1;
         for(int i = 0; i < objects.Length; i++) {
             btns.Add(objects[i].GetComponent<Button>());
-            btns[i].image.sprite = bgImage;
+            if(index > 4) {
+                index = 1;
+            }
+            btns[i].image.sprite = bgImage[index];
+            index++;
+            btns[i].interactable = false;
+        }
+        StartCoroutine(EsconderPuzzle());
+    }
+    IEnumerator EsconderPuzzle() {
+        int looper = btns.Count;
+        yield return new WaitForSeconds(2f);
+        for (int i = 0; i < looper; i++) {
+            btns[i].image.sprite = bgImage[0];
+            btns[i].interactable = true;
         }
     }
-    
     void AddGamePuzzles() {
         int looper = btns.Count;
         int index = 0;
@@ -87,8 +100,8 @@ public class PuzzleController : MonoBehaviour
             CheckIfTheGameIsFinished();
         } else {
             yield return new WaitForSeconds(.5f);
-            btns[firstGuessIndex].image.sprite = bgImage;
-            btns[secondGuessIndex].image.sprite = bgImage;
+            btns[firstGuessIndex].image.sprite = bgImage[0];
+            btns[secondGuessIndex].image.sprite = bgImage[0];
         }
         yield return new WaitForSeconds(.5f);
 
