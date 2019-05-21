@@ -6659,7 +6659,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &482533561
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6678,7 +6678,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 245.75, y: 66}
+  m_AnchoredPosition: {x: 245.75, y: 203}
   m_SizeDelta: {x: 490.5, y: 150.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &485095041
@@ -16282,6 +16282,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6355799997088205047, guid: 592beece56a3bd74b848e3dd334c3269,
+        type: 3}
+      propertyPath: NaPlantaforma
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6355799997088205047, guid: 592beece56a3bd74b848e3dd334c3269,
+        type: 3}
+      propertyPath: plantaforma
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6355799997088205044, guid: 592beece56a3bd74b848e3dd334c3269,
         type: 3}
       propertyPath: m_SortingOrder
@@ -16306,16 +16316,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2.56
-      objectReference: {fileID: 0}
-    - target: {fileID: 6355799997088205047, guid: 592beece56a3bd74b848e3dd334c3269,
-        type: 3}
-      propertyPath: NaPlantaforma
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6355799997088205047, guid: 592beece56a3bd74b848e3dd334c3269,
-        type: 3}
-      propertyPath: plantaforma
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 592beece56a3bd74b848e3dd334c3269, type: 3}
@@ -22040,6 +22040,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6355799997088205047, guid: 592beece56a3bd74b848e3dd334c3269,
+        type: 3}
+      propertyPath: plantaforma
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6355799997088205047, guid: 592beece56a3bd74b848e3dd334c3269,
+        type: 3}
+      propertyPath: NaPlantaforma
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6355799997088205044, guid: 592beece56a3bd74b848e3dd334c3269,
         type: 3}
       propertyPath: m_Color.r
@@ -22053,16 +22063,6 @@ PrefabInstance:
     - target: {fileID: 6355799997088205044, guid: 592beece56a3bd74b848e3dd334c3269,
         type: 3}
       propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6355799997088205047, guid: 592beece56a3bd74b848e3dd334c3269,
-        type: 3}
-      propertyPath: plantaforma
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6355799997088205047, guid: 592beece56a3bd74b848e3dd334c3269,
-        type: 3}
-      propertyPath: NaPlantaforma
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
