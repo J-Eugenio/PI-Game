@@ -23,9 +23,10 @@ public class DialogueTrigger : MonoBehaviour {
             TriggerDialogue();
             if (AtivarPuzzle) {
                 showPuzzles.SetActive(true);
+                plataforma.SetActive(true);
             }
 
-            plataforma.SetActive(true);
+            
         }
 
 
