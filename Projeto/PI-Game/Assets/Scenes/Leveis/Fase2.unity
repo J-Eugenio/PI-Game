@@ -1649,7 +1649,9 @@ MonoBehaviour:
     - "Antes do pleito, festa, riso e gosto,\r\nDepois do pleito, imposto e mais imposto.\r\nPobre
       matuto do sert\xE3o do Norte!\""
     - "Nossa voc\xEA viu isso? Era como se algo comunicasse com a gente!!\n"
-    - "Nossa voc\xEA viu isso? Era como se algo comunicasse com a gente!!\n"
+    - 'Devemos estar perto do fim, cuidado jogador!
+
+'
   showPuzzles: {fileID: 0}
   plataforma: {fileID: 0}
   nExec: 1
@@ -17320,7 +17322,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 565471249}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -73.56, y: -17.84, z: 0.94331354}
+  m_LocalPosition: {x: -72, y: -17.84, z: 0.94331354}
   m_LocalScale: {x: 0.437026, y: 0.39734182, z: 1}
   m_Children: []
   m_Father: {fileID: 522402912}
@@ -20767,6 +20769,11 @@ PrefabInstance:
         type: 3}
       propertyPath: plantaforma
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6441239620281399566, guid: 592beece56a3bd74b848e3dd334c3269,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.96
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 592beece56a3bd74b848e3dd334c3269, type: 3}
@@ -31780,7 +31787,7 @@ PrefabInstance:
     - target: {fileID: 8507360111048278789, guid: f319a14b2f4ce2c46be9595c1a797d2e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 37.41
+      value: 39.672
       objectReference: {fileID: 0}
     - target: {fileID: 8507360111048278789, guid: f319a14b2f4ce2c46be9595c1a797d2e,
         type: 3}
@@ -31790,7 +31797,7 @@ PrefabInstance:
     - target: {fileID: 8507360111048278789, guid: f319a14b2f4ce2c46be9595c1a797d2e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.12
+      value: 10.187
       objectReference: {fileID: 0}
     - target: {fileID: 8507360111048278789, guid: f319a14b2f4ce2c46be9595c1a797d2e,
         type: 3}
@@ -31835,7 +31842,7 @@ PrefabInstance:
     - target: {fileID: 8507360111048278789, guid: f319a14b2f4ce2c46be9595c1a797d2e,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.3191502
+      value: 2.9640012
       objectReference: {fileID: 0}
     - target: {fileID: 8507360111048278789, guid: f319a14b2f4ce2c46be9595c1a797d2e,
         type: 3}
@@ -31870,7 +31877,7 @@ PrefabInstance:
     - target: {fileID: 8564221713277601159, guid: f319a14b2f4ce2c46be9595c1a797d2e,
         type: 3}
       propertyPath: m_Offset.x
-      value: 0.45290303
+      value: 0.0010108948
       objectReference: {fileID: 0}
     - target: {fileID: 8564221713277601159, guid: f319a14b2f4ce2c46be9595c1a797d2e,
         type: 3}
@@ -31880,7 +31887,7 @@ PrefabInstance:
     - target: {fileID: 8564221713277601159, guid: f319a14b2f4ce2c46be9595c1a797d2e,
         type: 3}
       propertyPath: m_Size.x
-      value: 10.586657
+      value: 11.49044
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f319a14b2f4ce2c46be9595c1a797d2e, type: 3}
@@ -36393,6 +36400,7 @@ Transform:
   - {fileID: 940051812}
   - {fileID: 355779307}
   - {fileID: 1363604843}
+  - {fileID: 1378253771}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -38762,6 +38770,86 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1378253768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1378253771}
+  - component: {fileID: 1378253770}
+  - component: {fileID: 1378253769}
+  m_Layer: 0
+  m_Name: DialogoFinal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1378253769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378253768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00ddd33eae28b5148a72170d47ccd942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: "Assar\xE9"
+    sentences:
+    - "Voc\xEA conseguiu, se chegou at\xE9 aqui, e porque conseguiu pegar todos os
+      itens e ainda pegar o bonus!"
+    - Siga com essa plataforma!
+  showPuzzles: {fileID: 0}
+  plataforma: {fileID: 0}
+  nExec: 1
+  AtivarPuzzle: 0
+--- !u!61 &1378253770
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378253768}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &1378253771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378253768}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 98.62001, y: -13.109999, z: -0.68359375}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1271228176}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1383062793
 GameObject:
   m_ObjectHideFlags: 0
@@ -50345,7 +50433,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1806787014}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.631134, y: 2.1697874, z: -6.064453}
+  m_LocalPosition: {x: 11.68, y: 2.1697874, z: -6.064453}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1394494731}
@@ -59628,6 +59716,90 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2144825870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2144825873}
+  - component: {fileID: 2144825872}
+  - component: {fileID: 2144825871}
+  m_Layer: 0
+  m_Name: DialogoFinal2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2144825871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144825870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00ddd33eae28b5148a72170d47ccd942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: "Assar\xE9"
+    sentences:
+    - "\"Jogador, obrigado por ter vindo atr\xE1s de mim, espero que voc\xEA consiga
+      se lembrar dos meus poemas, que eles sejam eternos,"
+    - "estou junto de minha m\xE3e, o que voc\xEA se passava, era minha imagem, fazendo
+      com que voc\xEA veja o quanto minha terra e meus poemas s\xE3 fortes,"
+    - "Agrade\xE7o por ter chegado at\xE9 aqui, cuidado, e parab\xE9ns!\""
+    - "E assim termina essa curta historia, de um jovem poeta, que espalhava por ai,
+      a patativa do Assar\xE9!!"
+  showPuzzles: {fileID: 0}
+  plataforma: {fileID: 0}
+  nExec: 1
+  AtivarPuzzle: 0
+--- !u!61 &2144825872
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144825870}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &2144825873
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144825870}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 273.33588, y: 1.6851733, z: -0.68359375}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2146184707
 GameObject:
   m_ObjectHideFlags: 0
