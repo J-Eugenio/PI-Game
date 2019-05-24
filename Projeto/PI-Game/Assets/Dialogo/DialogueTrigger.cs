@@ -6,6 +6,7 @@ public class DialogueTrigger : MonoBehaviour {
 
 	public Dialogue dialogue;
     public GameObject showPuzzles;
+    public GameObject plataforma;
     public int nExec = 1;
     public bool AtivarPuzzle = false;
 
@@ -23,6 +24,8 @@ public class DialogueTrigger : MonoBehaviour {
             if (AtivarPuzzle) {
                 showPuzzles.SetActive(true);
             }
+
+            plataforma.SetActive(true);
         }
 
 
