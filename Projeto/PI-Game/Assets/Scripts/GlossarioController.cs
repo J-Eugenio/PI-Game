@@ -13,6 +13,18 @@ public class GlossarioController : MonoBehaviour
         PlayerPrefs.DeleteAll();
         SceneManager.LoadScene("GlossarioJogo");
     }
+
+    public void IrSobreInimigos()
+    {
+        StartCoroutine(SobreInimigo());
+    }
+
+    IEnumerator SobreInimigo()
+    {
+        yield return new WaitForSeconds(0);
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene("TelaGlossarioInimigos");
+    }
     public void IrSobrePersonagens() {
         StartCoroutine(SobrePersonagens());
     }
