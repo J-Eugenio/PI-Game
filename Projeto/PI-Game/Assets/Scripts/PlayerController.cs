@@ -5,22 +5,24 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-    public float speed;
-    public float jumpForce;
-    public static PlayerController pl;
+    public float speed;//velocidade do personagem
+    public float jumpForce;//forã do pulo
+    public static PlayerController pl;//objeto do player
 
+    public CharacterController2D controller;
 
     private Rigidbody2D player;
     private bool facingRight = true;
     private bool jump = false;
-    private Animator anim;
+    private Animator anim;//animação do personagem
     private bool noChao = false;
-    private Transform groundCheck;
-    private Vector3 posPlayer;
+    private Transform groundCheck;//objeto que verifica se o player esta no chão
+    private Vector3 posPlayer;//posição X,Y,Z do personagem
     public GameObject TelaWin;
-    public GameObject[] Stars = new GameObject[3];
-
-
+    public GameObject[] Stars = new GameObject[3];//guarda as estrelas do score
+    //usado no calculo para o personagem se mover
+    float horizontalMove = 0f;
+    int raw = 0;//valor faz o personagem ir para esquerda(-1), direita(1) ou fica parado(0)
 
     void Start () {
         if (!GameManager.check) {
@@ -39,9 +41,10 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
         
         noChao = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
-        
-        
-
+        //faz o personagem se mover
+        horizontalMove = raw * speed;
+        controller.Move(horizontalMove * Time.fixedDeltaTime, false, false);
+        //requisitos do score
         if (GameManager.gm.GetVida() == true && GameManager.gm.GetEscudo() == true &&
             GameManager.gm.GetVelocidade() == true && GameManager.gm.GetWin() == true) {        
             TelaWin.SetActive(true);
@@ -69,7 +72,7 @@ public class PlayerController : MonoBehaviour {
 
 
     }
-
+    // função do pulo
     public void _jump()
     {
         if (noChao)
@@ -80,34 +83,20 @@ public class PlayerController : MonoBehaviour {
     }
 
     void FixedUpdate() {
-
-            
-        //if (joystick.Horizontal >= .2f) {
-        //    player.velocity = new Vector2(h * speed, player.velocity.y);
-        //} else if (joystick.Horizontal <= -.2f) {
-        //    player.velocity = new Vector2(h * speed, player.velocity.y);
-        //} else {
-        //    player.velocity = new Vector2(0, player.velocity.y);
-        //}
-        //if (h > 0 && !facingRight) {
-        //    Flip();
-        //} else if (h < 0 && facingRight) {
-        //    Flip();
-        //}
-
         if (jump) {
             player.AddForce(new Vector2(0, jumpForce));
             jump = false;
         }
-    }
 
+    }
+    //faz o personagem virar para os lados
     void Flip() {
         facingRight = !facingRight;
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
     }
-
+    //salvar os dados do jogo atual
     public void Salvar()
     {
         PlayerData.posX = transform.position.x;
@@ -121,6 +110,7 @@ public class PlayerController : MonoBehaviour {
         PlayerPrefs.SetFloat("PosZ", PlayerData.posZ);
         PlayerPrefs.SetInt("Vidas", PlayerData.vidas);
     }
+    //retorna a velocidade anterior dps que o efeito do item acabar
     private void RetornaVelocidadeAnterior() {
         StartCoroutine(VelocidadeAnterior());
 
@@ -130,6 +120,7 @@ public class PlayerController : MonoBehaviour {
         int VeloAnterior = 5;
         speed = VeloAnterior;
     }
+    //Item Velocidade e sua velocidade
     private void OnTriggerEnter2D(Collider2D velocidade)
     {
         if (velocidade.gameObject.CompareTag("velocidade"))
@@ -138,29 +129,24 @@ public class PlayerController : MonoBehaviour {
             speed = 8;
             Destroy(velocidade.gameObject);
             RetornaVelocidadeAnterior();
-        }
-        
+        }      
     }
+
     public void FrenteDown() {
-        if(player.transform.localScale.x < 0) {
-            Flip();
-        }
-        player.velocity = new Vector2(1 * speed, player.velocity.y);
+        raw = 1;
         anim.SetBool("Velocidade", true);
     }
     public void FrenteUp() {
-        player.velocity = new Vector2(0 * speed, player.velocity.y);
+        raw = 0;
         anim.SetBool("Velocidade", false);
     }
+
     public void TrazDown() {
-        if (player.transform.localScale.x > 0) {
-            Flip();
-        }
-        player.velocity = new Vector2(-1 * speed, player.velocity.y);
+        raw = -1;
         anim.SetBool("Velocidade", true);
     }
     public void TrazUp() {
-        player.velocity = new Vector2(0 * speed, player.velocity.y);
+        raw = 0;
         anim.SetBool("Velocidade", false);
     }
 }
