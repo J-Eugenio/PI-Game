@@ -62,4 +62,11 @@ public class GlossarioController : MonoBehaviour
         yield return new WaitForSeconds(0);
         SceneManager.LoadScene("Fase1");
     }
+    public void Level2() {
+        StartCoroutine(carregarLevel2());
+    }
+    IEnumerator carregarLevel2() {
+        yield return new WaitForSeconds(0);
+        SceneManager.LoadScene("Fase2");
+    }
 }

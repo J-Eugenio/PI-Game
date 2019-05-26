@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GlossarioJogo.unity
     guid: 04cd7c9195d3fef46b3851d37fd75d69
+  - enabled: 1
+    path: Assets/Scenes/Leveis/Fase2.unity
+    guid: e790a72831a13f84ca70a4df82d1c562
   m_configObjects: {}

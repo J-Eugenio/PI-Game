@@ -18,8 +18,10 @@ public class PlayerController : MonoBehaviour {
     private bool noChao = false;
     private Transform groundCheck;//objeto que verifica se o player esta no chão
     private Vector3 posPlayer;//posição X,Y,Z do personagem
-    public GameObject TelaWin;
-    public GameObject[] Stars = new GameObject[3];//guarda as estrelas do score
+    [SerializeField]
+    private GameObject TelaWin;
+    [SerializeField]
+    private GameObject[] Stars = new GameObject[3];//guarda as estrelas do score
     //usado no calculo para o personagem se mover
     float horizontalMove = 0f;
     int raw = 0;//valor faz o personagem ir para esquerda(-1), direita(1) ou fica parado(0)
@@ -27,6 +29,8 @@ public class PlayerController : MonoBehaviour {
     void Start () {
         if (!GameManager.check) {
             Salvar();
+            GameManager.gm.ScoreTotal = 0;
+            GameManager.gm.ZeraStatusItens();
         }
         player = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
