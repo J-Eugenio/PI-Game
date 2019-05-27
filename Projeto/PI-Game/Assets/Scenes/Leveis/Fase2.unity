@@ -3739,6 +3739,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6687777020452163141, guid: c18689477d621c646a6f966f48436c37,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6687777020452163144, guid: c18689477d621c646a6f966f48436c37,
         type: 3}
       propertyPath: plantaforma
@@ -3748,11 +3753,6 @@ PrefabInstance:
         type: 3}
       propertyPath: NaPlantaforma
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6687777020452163141, guid: c18689477d621c646a6f966f48436c37,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c18689477d621c646a6f966f48436c37, type: 3}
@@ -15863,6 +15863,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6687777020452163141, guid: c18689477d621c646a6f966f48436c37,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6687777020452163144, guid: c18689477d621c646a6f966f48436c37,
         type: 3}
       propertyPath: plantaforma
@@ -15872,11 +15877,6 @@ PrefabInstance:
         type: 3}
       propertyPath: NaPlantaforma
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6687777020452163141, guid: c18689477d621c646a6f966f48436c37,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6687777020452163146, guid: c18689477d621c646a6f966f48436c37,
         type: 3}
@@ -18704,6 +18704,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: MenuEsc
       objectReference: {fileID: 0}
+    - target: {fileID: 6189426114770368391, guid: 4df03a48c62a84a498fd58c9daedaced,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189426114777567240, guid: 4df03a48c62a84a498fd58c9daedaced,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 530695382}
+    - target: {fileID: 6189426114777567240, guid: 4df03a48c62a84a498fd58c9daedaced,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: attack2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189426115712388488, guid: 4df03a48c62a84a498fd58c9daedaced,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 530695382}
+    - target: {fileID: 6189426115712388488, guid: 4df03a48c62a84a498fd58c9daedaced,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: attack1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189426115339472332, guid: 4df03a48c62a84a498fd58c9daedaced,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189426115900291503, guid: 4df03a48c62a84a498fd58c9daedaced,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 530695378}
+    - target: {fileID: 6189426115900291503, guid: 4df03a48c62a84a498fd58c9daedaced,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: _jump
+      objectReference: {fileID: 0}
     - target: {fileID: 6189426116194662855, guid: 4df03a48c62a84a498fd58c9daedaced,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18849,36 +18889,6 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TrazUp
       objectReference: {fileID: 0}
-    - target: {fileID: 6189426115712388488, guid: 4df03a48c62a84a498fd58c9daedaced,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 530695382}
-    - target: {fileID: 6189426115712388488, guid: 4df03a48c62a84a498fd58c9daedaced,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: attack1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6189426114777567240, guid: 4df03a48c62a84a498fd58c9daedaced,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 530695382}
-    - target: {fileID: 6189426114777567240, guid: 4df03a48c62a84a498fd58c9daedaced,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: attack2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6189426115900291503, guid: 4df03a48c62a84a498fd58c9daedaced,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 530695378}
-    - target: {fileID: 6189426115900291503, guid: 4df03a48c62a84a498fd58c9daedaced,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: _jump
-      objectReference: {fileID: 0}
     - target: {fileID: 1158065216951129586, guid: 4df03a48c62a84a498fd58c9daedaced,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -18889,10 +18899,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: DisplayNextSentence
       objectReference: {fileID: 0}
-    - target: {fileID: 6189426114770368391, guid: 4df03a48c62a84a498fd58c9daedaced,
+    - target: {fileID: 6189426115339472307, guid: 4df03a48c62a84a498fd58c9daedaced,
         type: 3}
-      propertyPath: m_IsActive
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 26f4dc9d84a7e4952bd204475e44b7fe,
+        type: 3}
+    - target: {fileID: 6189426115339472307, guid: 4df03a48c62a84a498fd58c9daedaced,
+        type: 3}
+      propertyPath: m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189426115339472307, guid: 4df03a48c62a84a498fd58c9daedaced,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.88235295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4df03a48c62a84a498fd58c9daedaced, type: 3}
@@ -60101,6 +60122,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rogue_03
       objectReference: {fileID: 0}
+    - target: {fileID: 530695378, guid: b1acb3079e770f9498f74387b09179aa, type: 3}
+      propertyPath: TelaWin
+      value: 
+      objectReference: {fileID: 1309761531}
+    - target: {fileID: 530695378, guid: b1acb3079e770f9498f74387b09179aa, type: 3}
+      propertyPath: Stars.Array.data[0]
+      value: 
+      objectReference: {fileID: 664379173}
+    - target: {fileID: 530695378, guid: b1acb3079e770f9498f74387b09179aa, type: 3}
+      propertyPath: Stars.Array.data[1]
+      value: 
+      objectReference: {fileID: 113189411}
+    - target: {fileID: 530695378, guid: b1acb3079e770f9498f74387b09179aa, type: 3}
+      propertyPath: Stars.Array.data[2]
+      value: 
+      objectReference: {fileID: 1244731710}
     - target: {fileID: 3770597110488350432, guid: b1acb3079e770f9498f74387b09179aa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -60156,22 +60193,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 530695378, guid: b1acb3079e770f9498f74387b09179aa, type: 3}
-      propertyPath: TelaWin
-      value: 
-      objectReference: {fileID: 1309761531}
-    - target: {fileID: 530695378, guid: b1acb3079e770f9498f74387b09179aa, type: 3}
-      propertyPath: Stars.Array.data[0]
-      value: 
-      objectReference: {fileID: 664379173}
-    - target: {fileID: 530695378, guid: b1acb3079e770f9498f74387b09179aa, type: 3}
-      propertyPath: Stars.Array.data[1]
-      value: 
-      objectReference: {fileID: 113189411}
-    - target: {fileID: 530695378, guid: b1acb3079e770f9498f74387b09179aa, type: 3}
-      propertyPath: Stars.Array.data[2]
-      value: 
-      objectReference: {fileID: 1244731710}
     - target: {fileID: 530695381, guid: b1acb3079e770f9498f74387b09179aa, type: 3}
       propertyPath: Timer
       value: 
