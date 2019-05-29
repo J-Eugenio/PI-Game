@@ -22,6 +22,16 @@ public class TimerCount : MonoBehaviour
     void Update()
     {
 
-        
+        if (GameManager.isTimer)
+        {
+            float t = Time.time - startTime;
+
+            string minutes = ((int)t / 60).ToString();
+            string seconds = (t % 60).ToString("f2");
+
+            Timer.text = minutes + ":" + seconds;
+            GameManager.timer = Timer.text;
+        }
+
     }
 }

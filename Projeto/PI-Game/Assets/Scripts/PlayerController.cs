@@ -121,7 +121,7 @@ public class PlayerController : MonoBehaviour {
     }
     IEnumerator VelocidadeAnterior() {
         yield return new WaitForSeconds(8);
-        int VeloAnterior = 5;
+        int VeloAnterior = 30;
         speed = VeloAnterior;
     }
     //Item Velocidade e sua velocidade
@@ -130,7 +130,7 @@ public class PlayerController : MonoBehaviour {
         if (velocidade.gameObject.CompareTag("velocidade"))
         {
             GameManager.gm.SetVelocidade(true);
-            speed = 8;
+            speed = 40;
             Destroy(velocidade.gameObject);
             RetornaVelocidadeAnterior();
         }      
