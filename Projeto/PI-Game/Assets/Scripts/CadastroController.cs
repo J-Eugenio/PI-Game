@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Networking;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class CadastroController : MonoBehaviour {
@@ -33,38 +35,44 @@ public class CadastroController : MonoBehaviour {
         if (nomeField.text == "" || sobrenomeField.text == "" || idadeField.text == "" || usuarioField.text == "" || senhaField.text == "") {
             FeedBakcError("Preencha todos os campos!");
         } else {
-            string nome = nomeField.text;
-            string sobrenome = sobrenomeField.text;
-            string idade = idadeField.text;
-            string usuario = usuarioField.text;
-            string senha = senhaField.text;
-            string token = "YdTiqQBetWWdZXVzOP5M";
-            WWW www = new WWW(urlCadastro + "?nome=" + nome + "&sobrenome=" + sobrenome + "&idade=" + idade + "&login=" + usuario + "&senha=" + senha + "&token=" + token);
-            StartCoroutine(ValidaCadastro(www));
+            StartCoroutine(ValidaCadastro());
         }
     }
 
-    IEnumerator ValidaCadastro(WWW www) {
-        yield return www;
-        if (www.error == null) {
-            if (www.text == "1") {
-                FeedBackOK("Cadastro Realizado com sucesso...");
-                StartCoroutine(CarregaScene());
-            }
-        } else {
-            if (www.error == "Cannot connect to destination") {
-                FeedBakcError("Servidor Indisponivel!!");
+    IEnumerator ValidaCadastro() {
+        string nome = nomeField.text;
+        string sobrenome = sobrenomeField.text;
+        string idade = idadeField.text;
+        string usuario = usuarioField.text;
+        string senha = senhaField.text;
+        string token = "YdTiqQBetWWdZXVzOP5M";
+        using (UnityWebRequest www = UnityWebRequest.Get(urlCadastro + "?nome=" + nome + "&sobrenome=" + sobrenome + "&idade=" + idade + "&login=" + usuario + "&senha=" + senha + "&token=" + token)) {
+            yield return www.SendWebRequest();
+
+            if (www.isNetworkError || www.isHttpError) {
+                Debug.Log(www.error);
+            } else {
+                // Show results as text
+                Debug.Log(www.downloadHandler.text);
+                if(www.downloadHandler.text == "1"){
+                    FeedBackOK("Cadastro realizado com sucesso...");
+                    StartCoroutine(CarregaScene());
+                } else {
+                    Debug.Log("Erro no cadastro");
+                }
+                // Or retrieve results as binary data
+                byte[] results = www.downloadHandler.data;
             }
         }
     }
 
     IEnumerator CarregaScene() {
         yield return new WaitForSeconds(2);
-        Application.LoadLevel("Login");
+        SceneManager.LoadScene("Login");
     }
 
     public void Voltar() {
-        Application.LoadLevel("Login");
+        SceneManager.LoadScene("Login");
     }
     void FeedBackOK(string mensagem) {
         FeedBackMsgCad.CrossFadeAlpha(100f, 0, false);

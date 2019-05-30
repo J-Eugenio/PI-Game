@@ -49,7 +49,7 @@ public class MenuController : MonoBehaviour {
     }
     IEnumerator carregarVoltarIni() {
         yield return new WaitForSeconds(0);
-        SceneManager.LoadScene("MenuPrincipal");
+        SceneManager.LoadScene("Login");
     }
     IEnumerator Glossario() {
         yield return new WaitForSeconds(0);

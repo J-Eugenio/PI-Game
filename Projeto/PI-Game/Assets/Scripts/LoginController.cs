@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Networking;
 using UnityEngine;
 
 public class LoginController : MonoBehaviour {
@@ -35,32 +36,31 @@ public class LoginController : MonoBehaviour {
         if (usuarioF.text == "" || senhaF.text == "") {
             FeedBakcError("Preencha todos os campos!");
         } else {
-            string usuario = usuarioF.text;
-            string senha = senhaF.text;
-            string token = "YdTiqQBetWWdZXVzOP5M";
-            if (LembrarDados.isOn) {
-                PlayerPrefs.SetInt("lembra", 1);
-                PlayerPrefs.SetString("rememberLogin", usuario);
-                PlayerPrefs.SetString("rememberPass", senha);
-            }
-
-            WWW www = new WWW (urlLogin + "?login=" + usuario + "&senha=" + senha + "&token=" + token);
-            StartCoroutine(ValidaLogin(www));
+            StartCoroutine(ValidaLogin());
         }
     }
 
-    IEnumerator ValidaLogin(WWW www) {
-        yield return www;
-        if(www.error == null) {
-            if (www.text == "1") {
-                FeedBackOK("Login Realizado com sucesso\nCarregando Jogo...");
-                StartCoroutine(CarregaScene());
+    IEnumerator ValidaLogin() {
+        string usuario = usuarioF.text;
+        string senha = senhaF.text;
+        string token = "YdTiqQBetWWdZXVzOP5M";
+
+        using (UnityWebRequest www = UnityWebRequest.Get(urlLogin + "?login=" + usuario + "&senha=" + senha + "&token=" + token)) {
+            yield return www.SendWebRequest();
+
+            if (www.isNetworkError || www.isHttpError) {
+                Debug.Log(www.error);
             } else {
-                FeedBakcError("Usuário ou Senha inválidos");
-            }
-        } else {
-            if (www.error == "Cannot connect to destination") {
-                FeedBakcError("Servidor Indisponivel!!");
+                // Show results as text
+                Debug.Log(www.downloadHandler.text);
+                if (www.downloadHandler.text == "1") {
+                    FeedBackOK("Login realizado com sucesso...");
+                    StartCoroutine(CarregaScene());
+                } else {
+                    Debug.Log("Erro no Login");
+                }
+                // Or retrieve results as binary data
+                byte[] results = www.downloadHandler.data;
             }
         }
     }
