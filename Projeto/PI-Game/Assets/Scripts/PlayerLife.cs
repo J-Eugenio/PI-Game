@@ -9,6 +9,7 @@ public class PlayerLife : MonoBehaviour
 {
     Animator anim;
     public int vidas = 0;
+    public int nExec = 1;
     bool vivo = true;
     [SerializeField]
     private Button direita, esquerda, atack1, atack2, pulo;
@@ -61,15 +62,18 @@ public class PlayerLife : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D outro)
     {
         
-
+   
         if (outro.gameObject.CompareTag("vida"))
         {
+            
             GameManager.gm.SetVida(true);
             GameManager.gm.SetVidas(1);
             Destroy(outro.gameObject);
         }
+
         if (outro.gameObject.CompareTag("shield"))
         {
+            
             GameManager.gm.SetShield(true);
             GameManager.gm.SetEscudo(true);
             RemoverEscudo();

@@ -16,14 +16,13 @@ public class GameManager : MonoBehaviour
     public bool win = false;
     public int ScoreTotal = 0;
     public int nInimigos = 0;
-    public static string timer;
-    public static bool isTimer = true;
-    private float startTime;
+  
+  
     //score fases
     public int fase1 = 0;
     public int fase2 = 0;
     //
-    public Text Timer;
+    
     void Awake()
     {
         if(gm == null) {
@@ -38,19 +37,8 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
-        tempo();
+       
         ScoreFases();
-    }
-    void tempo() {
-        if (isTimer) {
-            float t = Time.time - startTime;
-
-            string minutes = ((int)t / 60).ToString();
-            string seconds = (t % 60).ToString("f2");
-
-            Timer.text = minutes + ":" + seconds;
-            timer = Timer.text;
-        }
     }
     void ScoreFases() {
         if (SceneManager.GetActiveScene().name == "Fase1") {
@@ -105,7 +93,7 @@ public class GameManager : MonoBehaviour
         GameObject.Find("txtVidasScore").GetComponent<Text>().text = vidas.ToString();
         GameObject.Find("txtInimigosM").GetComponent<Text>().text = nInimigos.ToString();
         GameObject.Find("txtScore").GetComponent<Text>().text = ScoreTotal.ToString();
-        GameObject.Find("txtTempo").GetComponent<Text>().text = timer;
+        
     }
 
     public void SetVida(bool vida) {

@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour {
 
     public CharacterController2D controller;
 
+    
+
     private Rigidbody2D player;
     private bool facingRight = true;
     private bool jump = false;
@@ -26,11 +28,17 @@ public class PlayerController : MonoBehaviour {
     float horizontalMove = 0f;
     int raw = 0;//valor faz o personagem ir para esquerda(-1), direita(1) ou fica parado(0)
 
+    private void Awake()
+    {
+        
+    }
     void Start () {
+        
         if (!GameManager.check) {
             Salvar();
             GameManager.gm.ScoreTotal = 0;
             GameManager.gm.ZeraStatusItens();
+            
         }
         player = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
@@ -69,7 +77,6 @@ public class PlayerController : MonoBehaviour {
                 Stars[1].SetActive(false);
                 Stars[2].SetActive(false);
             }
-            GameManager.isTimer = false;
             GameManager.gm.AttHudScore();
 
         }
@@ -103,6 +110,7 @@ public class PlayerController : MonoBehaviour {
     //salvar os dados do jogo atual
     public void Salvar()
     {
+        Debug.Log("Salvaou");
         PlayerData.posX = transform.position.x;
         PlayerData.posY = transform.position.y;
         PlayerData.posZ = transform.position.z;
@@ -129,6 +137,7 @@ public class PlayerController : MonoBehaviour {
     {
         if (velocidade.gameObject.CompareTag("velocidade"))
         {
+            
             GameManager.gm.SetVelocidade(true);
             speed = 40;
             Destroy(velocidade.gameObject);

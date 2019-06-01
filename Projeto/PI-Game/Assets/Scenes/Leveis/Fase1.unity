@@ -9848,12 +9848,12 @@ PrefabInstance:
     - target: {fileID: 1316591093458256125, guid: 36949305b39ef9049ac898ce7d495580,
         type: 3}
       propertyPath: m_Points.Array.data[13].x
-      value: 1.753175
+      value: 1.724519
       objectReference: {fileID: 0}
     - target: {fileID: 1316591093458256125, guid: 36949305b39ef9049ac898ce7d495580,
         type: 3}
       propertyPath: m_Points.Array.data[13].y
-      value: -0.10192242
+      value: 0.0462586
       objectReference: {fileID: 0}
     - target: {fileID: 1316591093458256125, guid: 36949305b39ef9049ac898ce7d495580,
         type: 3}
@@ -29574,7 +29574,6 @@ MonoBehaviour:
   nInimigos: 0
   fase1: 0
   fase2: 0
-  Timer: {fileID: 2090104129}
 --- !u!4 &1991090447
 Transform:
   m_ObjectHideFlags: 0
@@ -32974,7 +32973,7 @@ PrefabInstance:
     - target: {fileID: 6189426116194662851, guid: 4df03a48c62a84a498fd58c9daedaced,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6189426114770368391, guid: 4df03a48c62a84a498fd58c9daedaced,
         type: 3}
