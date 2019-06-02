@@ -1928,7 +1928,7 @@ GameObject:
   - component: {fileID: 40141716}
   - component: {fileID: 40141715}
   - component: {fileID: 40141714}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlataformaMovelPuzzle
   m_TagString: PlataformaMovel
   m_Icon: {fileID: 0}
@@ -25417,7 +25417,7 @@ GameObject:
   - component: {fileID: 835903576}
   - component: {fileID: 835903575}
   - component: {fileID: 835903574}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlataformaMovel (2)
   m_TagString: PlataformaMovel
   m_Icon: {fileID: 0}
@@ -40282,7 +40282,7 @@ GameObject:
   - component: {fileID: 1434343936}
   - component: {fileID: 1434343935}
   - component: {fileID: 1434343934}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlataformaMovel (1)
   m_TagString: PlataformaMovel
   m_Icon: {fileID: 0}
@@ -60223,12 +60223,12 @@ PrefabInstance:
     - target: {fileID: 3770597110488350432, guid: b1acb3079e770f9498f74387b09179aa,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 261.86
+      value: 1.41
       objectReference: {fileID: 0}
     - target: {fileID: 3770597110488350432, guid: b1acb3079e770f9498f74387b09179aa,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.24
+      value: -0.66
       objectReference: {fileID: 0}
     - target: {fileID: 3770597110488350432, guid: b1acb3079e770f9498f74387b09179aa,
         type: 3}
