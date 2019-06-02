@@ -159,4 +159,21 @@ public class PlayerController : MonoBehaviour {
         raw = 0;
         anim.SetBool("Velocidade", false);
     }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.transform.tag == "PlataformaMovel")
+        {
+            transform.parent = collision.transform;
+            
+        }
+    }
+
+    public void OnCollisionExit2D(Collision2D collision)
+    {
+        if(collision.transform.tag == "PlataformaMovel")
+        {
+            transform.parent = null;
+        }
+    }
 }
