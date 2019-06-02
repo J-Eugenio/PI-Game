@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     public bool win = false;
     public int ScoreTotal = 0;
     public int nInimigos = 0;
+    public string tempo;
+    public bool ativarTime = true;
   
   
     //score fases
@@ -93,7 +95,8 @@ public class GameManager : MonoBehaviour
         GameObject.Find("txtVidasScore").GetComponent<Text>().text = vidas.ToString();
         GameObject.Find("txtInimigosM").GetComponent<Text>().text = nInimigos.ToString();
         GameObject.Find("txtScore").GetComponent<Text>().text = ScoreTotal.ToString();
-        
+        GameObject.Find("txtTempo").GetComponent<Text>().text = tempo;
+        this.ativarTime = false;
     }
 
     public void SetVida(bool vida) {
@@ -135,5 +138,7 @@ public class GameManager : MonoBehaviour
         this.velocidade = false;
         this.vida = false;
         this.win = false;
+        this.tempo = "";
+        this.ativarTime = true;
     }
 }

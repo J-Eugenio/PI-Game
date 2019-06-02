@@ -32,8 +32,7 @@ public class PlayerController : MonoBehaviour {
     {
         
     }
-    void Start () {
-        
+    void Start () {     
         if (!GameManager.check) {
             Salvar();
             GameManager.gm.ScoreTotal = 0;
@@ -43,10 +42,7 @@ public class PlayerController : MonoBehaviour {
         player = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
         groundCheck = gameObject.transform.Find("GroundCheck");
-
-        transform.position = new Vector3(PlayerData.posX, PlayerData.posY, PlayerData.posZ);
-
-        
+        transform.position = new Vector3(PlayerData.posX, PlayerData.posY, PlayerData.posZ);   
     }
 	
 	// Update is called once per frame
@@ -77,6 +73,7 @@ public class PlayerController : MonoBehaviour {
                 Stars[1].SetActive(false);
                 Stars[2].SetActive(false);
             }
+
             GameManager.gm.AttHudScore();
 
         }

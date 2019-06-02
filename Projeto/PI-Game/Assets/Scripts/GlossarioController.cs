@@ -57,9 +57,11 @@ public class GlossarioController : MonoBehaviour
     }
     public void Level1() {
         StartCoroutine(carregarLevel1());
+        
     }
     IEnumerator carregarLevel1() {
         yield return new WaitForSeconds(0);
+        GameManager.check = false;
         SceneManager.LoadScene("Fase1");
     }
     public void Level2() {
@@ -67,6 +69,7 @@ public class GlossarioController : MonoBehaviour
     }
     IEnumerator carregarLevel2() {
         yield return new WaitForSeconds(0);
+        GameManager.check = false;
         SceneManager.LoadScene("Fase2");
     }
 }
