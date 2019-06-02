@@ -5325,10 +5325,10 @@ RectTransform:
   m_Father: {fileID: 42293086}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -752, y: 485}
-  m_SizeDelta: {x: 188.9, y: 108.3}
+  m_AnchorMin: {x: 0.112, y: 1}
+  m_AnchorMax: {x: 0.112, y: 1}
+  m_AnchoredPosition: {x: 93.5, y: -59}
+  m_SizeDelta: {x: 187.9, y: 108.29999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1041380307
 MonoBehaviour:
@@ -9062,9 +9062,10 @@ MonoBehaviour:
   win: 0
   ScoreTotal: 0
   nInimigos: 0
+  tempo: 
+  ativarTime: 1
   fase1: 0
   fase2: 0
-  Timer: {fileID: 769111709}
 --- !u!4 &1991090447
 Transform:
   m_ObjectHideFlags: 0
