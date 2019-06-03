@@ -457,11 +457,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6687777020452163141, guid: c18689477d621c646a6f966f48436c37,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 23
-      objectReference: {fileID: 0}
     - target: {fileID: 6687777020452163144, guid: c18689477d621c646a6f966f48436c37,
         type: 3}
       propertyPath: NaPlantaforma
@@ -471,6 +466,11 @@ PrefabInstance:
         type: 3}
       propertyPath: plantaforma
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6687777020452163141, guid: c18689477d621c646a6f966f48436c37,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c18689477d621c646a6f966f48436c37, type: 3}
@@ -732,7 +732,7 @@ PrefabInstance:
     - target: {fileID: 1316591093458256124, guid: 36949305b39ef9049ac898ce7d495580,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.507996
+      value: 33.21
       objectReference: {fileID: 0}
     - target: {fileID: 1316591093458256124, guid: 36949305b39ef9049ac898ce7d495580,
         type: 3}
@@ -12675,11 +12675,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6687777020452163141, guid: c18689477d621c646a6f966f48436c37,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 6687777020452163144, guid: c18689477d621c646a6f966f48436c37,
         type: 3}
       propertyPath: NaPlantaforma
@@ -12689,6 +12684,11 @@ PrefabInstance:
         type: 3}
       propertyPath: plantaforma
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6687777020452163141, guid: c18689477d621c646a6f966f48436c37,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c18689477d621c646a6f966f48436c37, type: 3}
@@ -21694,7 +21694,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1614589317}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -28.01, y: 0.27, z: 0.94331354}
+  m_LocalPosition: {x: -26.86, y: 0.27, z: 0.94331354}
   m_LocalScale: {x: 0.42835587, y: 0.3747744, z: 1}
   m_Children: []
   m_Father: {fileID: 522402912}
@@ -23761,11 +23761,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6687777020452163141, guid: c18689477d621c646a6f966f48436c37,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 6687777020452163144, guid: c18689477d621c646a6f966f48436c37,
         type: 3}
       propertyPath: NaPlantaforma
@@ -23775,6 +23770,11 @@ PrefabInstance:
         type: 3}
       propertyPath: plantaforma
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6687777020452163141, guid: c18689477d621c646a6f966f48436c37,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c18689477d621c646a6f966f48436c37, type: 3}
