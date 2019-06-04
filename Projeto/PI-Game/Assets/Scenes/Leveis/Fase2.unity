@@ -3998,11 +3998,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6687777020452163141, guid: c18689477d621c646a6f966f48436c37,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 6687777020452163144, guid: c18689477d621c646a6f966f48436c37,
         type: 3}
       propertyPath: plantaforma
@@ -4012,6 +4007,11 @@ PrefabInstance:
         type: 3}
       propertyPath: NaPlantaforma
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6687777020452163141, guid: c18689477d621c646a6f966f48436c37,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c18689477d621c646a6f966f48436c37, type: 3}
@@ -16123,11 +16123,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6687777020452163141, guid: c18689477d621c646a6f966f48436c37,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 6687777020452163144, guid: c18689477d621c646a6f966f48436c37,
         type: 3}
       propertyPath: plantaforma
@@ -16137,6 +16132,11 @@ PrefabInstance:
         type: 3}
       propertyPath: NaPlantaforma
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6687777020452163141, guid: c18689477d621c646a6f966f48436c37,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6687777020452163146, guid: c18689477d621c646a6f966f48436c37,
         type: 3}
@@ -19164,6 +19164,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: DisplayNextSentence
       objectReference: {fileID: 0}
+    - target: {fileID: 1158065216819394713, guid: 4df03a48c62a84a498fd58c9daedaced,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -11
+      objectReference: {fileID: 0}
     - target: {fileID: 6189426115339472307, guid: 4df03a48c62a84a498fd58c9daedaced,
         type: 3}
       propertyPath: m_Sprite
@@ -19180,10 +19185,10 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0.88235295
       objectReference: {fileID: 0}
-    - target: {fileID: 1158065216819394713, guid: 4df03a48c62a84a498fd58c9daedaced,
+    - target: {fileID: 3432535058731564842, guid: 4df03a48c62a84a498fd58c9daedaced,
         type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -11
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4df03a48c62a84a498fd58c9daedaced, type: 3}
@@ -30479,6 +30484,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 990949231}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1000941113 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6189426115339472332, guid: 4df03a48c62a84a498fd58c9daedaced,
+    type: 3}
+  m_PrefabInstance: {fileID: 639399678}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1000941114 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6189426115339472333, guid: 4df03a48c62a84a498fd58c9daedaced,
+    type: 3}
+  m_PrefabInstance: {fileID: 639399678}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1001827944
 GameObject:
   m_ObjectHideFlags: 0
@@ -40951,8 +40968,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aabab0b58e0887a49928c02b1f79c8c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzle: {fileID: 0}
+  puzzle: {fileID: 1000941113}
   puzzleController: {fileID: 1885469403}
+  cronometro: {fileID: 1684826236}
 --- !u!61 &1452284727
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -46038,6 +46056,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1684826236 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3432535058731564842, guid: 4df03a48c62a84a498fd58c9daedaced,
+    type: 3}
+  m_PrefabInstance: {fileID: 639399678}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1684826237 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 816472519444267003, guid: 4df03a48c62a84a498fd58c9daedaced,
+    type: 3}
+  m_PrefabInstance: {fileID: 639399678}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684826236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1684826240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684826236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae50f089412f5d142999e8905ff9ebfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cronometro: {fileID: 1684826237}
+  contagem: 2.5
 --- !u!1 &1686386976
 GameObject:
   m_ObjectHideFlags: 0
@@ -52806,7 +52856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 624ba341c39b39f4498a101ff54b937a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzle: {fileID: 0}
+  puzzle: {fileID: 1000941113}
   puzzleController: {fileID: 1885469403}
   BonusPuzzle: {fileID: 1452284725}
   bgImage:
@@ -52830,7 +52880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b73cb3047f95e4f40983c46a48322a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzlecampo: {fileID: 0}
+  puzzlecampo: {fileID: 1000941114}
   btn: {fileID: 5937434677876710376, guid: 0498093d9e3759f48b379b9f78aeb7cd, type: 3}
 --- !u!4 &1885469406
 Transform:
@@ -60223,12 +60273,12 @@ PrefabInstance:
     - target: {fileID: 3770597110488350432, guid: b1acb3079e770f9498f74387b09179aa,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.41
+      value: 185
       objectReference: {fileID: 0}
     - target: {fileID: 3770597110488350432, guid: b1acb3079e770f9498f74387b09179aa,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.66
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3770597110488350432, guid: b1acb3079e770f9498f74387b09179aa,
         type: 3}

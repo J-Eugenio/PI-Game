@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
@@ -8,7 +7,7 @@ public class PlayerController : MonoBehaviour {
     public float speed;//velocidade do personagem
     public float jumpForce;//forã do pulo
     public static PlayerController pl;//objeto do player
-
+    public GameObject cr;
     public CharacterController2D controller;
 
     

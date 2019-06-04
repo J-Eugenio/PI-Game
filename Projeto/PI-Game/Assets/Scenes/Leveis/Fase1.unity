@@ -4049,8 +4049,8 @@ SurfaceEffector2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_Speed: 20
-  m_SpeedVariation: 0
-  m_ForceScale: 0.5
+  m_SpeedVariation: 1
+  m_ForceScale: 0
   m_UseContactForce: 0
   m_UseFriction: 1
   m_UseBounce: 1
@@ -10329,6 +10329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 30
   jumpForce: 388
+  cr: {fileID: 996810503}
   controller: {fileID: 724758070}
   TelaWin: {fileID: 826688629}
   Stars:
@@ -14048,6 +14049,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9066a9ac09580b146ba59f440225c34f, type: 3}
+--- !u!1 &996810503 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3432535058731564842, guid: 4df03a48c62a84a498fd58c9daedaced,
+    type: 3}
+  m_PrefabInstance: {fileID: 6189426114514891762}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &996810505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996810503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae50f089412f5d142999e8905ff9ebfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cronometro: {fileID: 996810506}
+  contagem: 2.2
+--- !u!114 &996810506 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 816472519444267003, guid: 4df03a48c62a84a498fd58c9daedaced,
+    type: 3}
+  m_PrefabInstance: {fileID: 6189426114514891762}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996810503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &996896533
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19712,6 +19745,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puzzle: {fileID: 1601863230}
   puzzleController: {fileID: 1885469403}
+  cronometro: {fileID: 996810503}
 --- !u!61 &1452284727
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30896,6 +30930,10 @@ PrefabInstance:
       propertyPath: Stars.Array.data[2]
       value: 
       objectReference: {fileID: 1574197827}
+    - target: {fileID: 530695378, guid: b1acb3079e770f9498f74387b09179aa, type: 3}
+      propertyPath: cr
+      value: 
+      objectReference: {fileID: 996810503}
     - target: {fileID: 3770597110488350432, guid: b1acb3079e770f9498f74387b09179aa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -31393,6 +31431,51 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.a
       value: 0.88235295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189426115077504862, guid: 4df03a48c62a84a498fd58c9daedaced,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158065217121141905, guid: 4df03a48c62a84a498fd58c9daedaced,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1311561587538427415, guid: 4df03a48c62a84a498fd58c9daedaced,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9118375236790521126, guid: 4df03a48c62a84a498fd58c9daedaced,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609671795288001894, guid: 4df03a48c62a84a498fd58c9daedaced,
+        type: 3}
+      propertyPath: m_inputSource
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609671795288001894, guid: 4df03a48c62a84a498fd58c9daedaced,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609671795288001894, guid: 4df03a48c62a84a498fd58c9daedaced,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2614540168901328146, guid: 4df03a48c62a84a498fd58c9daedaced,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432535058731564842, guid: 4df03a48c62a84a498fd58c9daedaced,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4df03a48c62a84a498fd58c9daedaced, type: 3}
