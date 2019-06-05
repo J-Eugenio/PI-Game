@@ -39,6 +39,9 @@ public class MenuPause : MonoBehaviour {
     }
     public void pulerTutorial()
     {
+        if (SceneManager.GetActiveScene().name == "Tutorial") {
+            PlayerData.Unlocklevel1 = 1;
+        }
         SceneManager.LoadScene("Fase1");
         GameManager.gm.SetVidas(-1);
 
@@ -56,6 +59,12 @@ public class MenuPause : MonoBehaviour {
     }
 
     public void telaLeveis() {
+        if(SceneManager.GetActiveScene().name == "Tutorial") {
+            PlayerData.Unlocklevel1 = 1;
+        }
+        if (SceneManager.GetActiveScene().name == "Fase1") {
+            PlayerData.Unlocklevel2 = 1;
+        }
         SceneManager.LoadScene("TelaLeveis");
     }
 }

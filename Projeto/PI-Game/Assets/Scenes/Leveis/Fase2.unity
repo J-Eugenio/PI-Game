@@ -8582,7 +8582,7 @@ SurfaceEffector2D:
     m_Bits: 4294967295
   m_Speed: 20
   m_SpeedVariation: 0
-  m_ForceScale: 0.5
+  m_ForceScale: 0
   m_UseContactForce: 0
   m_UseFriction: 1
   m_UseBounce: 1

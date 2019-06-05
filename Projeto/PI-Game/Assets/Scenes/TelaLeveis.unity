@@ -2488,7 +2488,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -50.5}
-  m_SizeDelta: {x: 770, y: 100}
+  m_SizeDelta: {x: 668, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &977492824
 MonoBehaviour:
@@ -4687,6 +4687,11 @@ MonoBehaviour:
   - {fileID: 2078379712}
   - {fileID: 277487493}
   - {fileID: 85915503}
+  fase_1: {fileID: 2040549982}
+  fase_2: {fileID: 372624681}
+  _lock: {fileID: 21300000, guid: c7f9dddf0c9f443e4a4c7166e9024ff7, type: 3}
+  texto1: {fileID: 1692698338}
+  texto2: {fileID: 266131690}
 --- !u!1 &1673066714
 GameObject:
   m_ObjectHideFlags: 0

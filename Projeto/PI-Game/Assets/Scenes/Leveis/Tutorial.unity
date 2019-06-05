@@ -1420,7 +1420,7 @@ SurfaceEffector2D:
     m_Bits: 4294967295
   m_Speed: 20
   m_SpeedVariation: 0
-  m_ForceScale: 0.5
+  m_ForceScale: 0
   m_UseContactForce: 0
   m_UseFriction: 1
   m_UseBounce: 1
@@ -4684,6 +4684,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MenuEsc
       objectReference: {fileID: 0}
+    - target: {fileID: 6189426114770368391, guid: 4df03a48c62a84a498fd58c9daedaced,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6189426114777567240, guid: 4df03a48c62a84a498fd58c9daedaced,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -4703,6 +4708,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: attack1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189426115339472332, guid: 4df03a48c62a84a498fd58c9daedaced,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6189426115900291503, guid: 4df03a48c62a84a498fd58c9daedaced,
         type: 3}
@@ -4873,6 +4883,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -6.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158065217121141905, guid: 4df03a48c62a84a498fd58c9daedaced,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4df03a48c62a84a498fd58c9daedaced, type: 3}

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerData : MonoBehaviour
 {
+    public static int Unlocklevel1 = 0;
+    public static int Unlocklevel2 = 0;
     public static string level;
     public static float posX, posY, posZ;
     public static int vidas;
@@ -22,18 +24,25 @@ public class PlayerData : MonoBehaviour
     void Start() {
         if(PlayerPrefs.HasKey("PosX") && PlayerPrefs.HasKey("PosY") &&
             PlayerPrefs.HasKey("PosZ") && PlayerPrefs.HasKey("Level") &&
-            PlayerPrefs.HasKey("Vidas")) {
+            PlayerPrefs.HasKey("Vidas") && PlayerPrefs.HasKey("UnlockLevel1") 
+            && PlayerPrefs.HasKey("UnlockLevel2")) {
             posX = PlayerPrefs.GetFloat("PosX");
             posY = PlayerPrefs.GetFloat("PosY");
             posZ = PlayerPrefs.GetFloat("PosZ");
             level = PlayerPrefs.GetString("Level");
             vidas = PlayerPrefs.GetInt("Vidas");
+            Unlocklevel1 = PlayerPrefs.GetInt("UnlockLevel1");
+            Unlocklevel2 = PlayerPrefs.GetInt("UnlockLevel2");
+
         } else {
             PlayerPrefs.SetString("Level", level);
             PlayerPrefs.SetFloat("PosX", posX);
             PlayerPrefs.SetFloat("PosY", posY);
             PlayerPrefs.SetFloat("PosZ", posZ);
             PlayerPrefs.SetInt("Vidas", vidas);
+            // PlayerPrefs.SetInt("Vidas", vidas);
+            PlayerPrefs.SetInt("UnlockLevel1", Unlocklevel1);
+            PlayerPrefs.SetInt("UnlockLevel2", Unlocklevel2);
         }
     }
 }

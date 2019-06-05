@@ -7,16 +7,29 @@ public class EstrelasController : MonoBehaviour
 {
     public GameObject[] fase1 = new GameObject[3];//guarda as estrelas do score
     public GameObject[] fase2 = new GameObject[3];
+    public Button fase_1, fase_2;
+    public Sprite _lock;
+    public GameObject texto1, texto2;
     void Start()
-    {
-        
+    {       
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        estrelasFase1();
-        estrelasFase2();
+        if (PlayerData.Unlocklevel1 == 0) {
+            texto1.SetActive(false);
+            fase_1.image.overrideSprite = _lock;
+            fase_1.interactable = false;
+        }
+        if (PlayerData.Unlocklevel2 == 0) {
+            texto2.SetActive(false);
+            fase_2.image.overrideSprite = _lock;
+            fase_2.interactable = false;
+        }
+        //estrelasFase1();
+        //estrelasFase2();
     }
     void estrelasFase1() {
         if (GameManager.gm.fase1 >= 2500) {

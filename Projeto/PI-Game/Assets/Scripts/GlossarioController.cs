@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class GlossarioController : MonoBehaviour
 {
+    void Start() {
+        Debug.Log("FOI");
+    }
     public void IrSobreJogo() {
         StartCoroutine(SobreJogo());
     }
