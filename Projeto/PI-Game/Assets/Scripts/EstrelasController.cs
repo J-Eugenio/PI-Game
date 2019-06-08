@@ -28,8 +28,8 @@ public class EstrelasController : MonoBehaviour
             fase_2.image.overrideSprite = _lock;
             fase_2.interactable = false;
         }
-        //estrelasFase1();
-        //estrelasFase2();
+        estrelasFase1();
+        estrelasFase2();
     }
     void estrelasFase1() {
         if (GameManager.gm.fase1 >= 2500) {
