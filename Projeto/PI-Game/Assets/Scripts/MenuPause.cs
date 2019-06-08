@@ -43,7 +43,7 @@ public class MenuPause : MonoBehaviour {
             PlayerData.Unlocklevel1 = 1;
         }
         SceneManager.LoadScene("Fase1");
-        GameManager.gm.SetVidas(-1);
+
 
 
     }
