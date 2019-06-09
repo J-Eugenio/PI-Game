@@ -22,30 +22,33 @@ public class inimigo : MonoBehaviour
         ani = gameObject.GetComponent<Animator>();
     }
 
-    void Update()
-    {
-        if (NaPlantaforma)
-        {
-            noChao = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
-        }
-        else
-        {
-            noChao = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("GroundInimigo"));
-        }
+    void Update() {
         
-        if (plantaforma) {
-            if (!noChao) {
-                velocidade *= -1;
+            if (NaPlantaforma) {
+                noChao = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+            } else {
+                noChao = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("GroundInimigo"));
             }
-        } else {
-            if (noChao) {
-                velocidade *= -1;
+
+       
+            if (plantaforma) {
+                if (!noChao) {
+                    velocidade *= -1;
+                }
+            } else {
+                if (noChao) {
+                    velocidade *= -1;
+                }
             }
-        }
+        
     }
 
     void FixedUpdate() {
-        ini.velocity = new Vector2(velocidade, ini.velocity.y);
+        if (GameManager.gm.ativarInimigos) {
+            ini.velocity = new Vector2(velocidade, ini.velocity.y);//faz andar
+        } else {
+            ini.velocity = new Vector2(0, ini.velocity.y);
+        }
         if(velocidade > 0 && facingRight) {
             Flip();
         }else if( velocidade < 0 && !facingRight) {

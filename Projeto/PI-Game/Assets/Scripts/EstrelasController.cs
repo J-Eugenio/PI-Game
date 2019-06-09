@@ -22,14 +22,18 @@ public class EstrelasController : MonoBehaviour
             texto1.SetActive(false);
             fase_1.image.overrideSprite = _lock;
             fase_1.interactable = false;
+        } else {
+            estrelasFase1();
         }
         if (PlayerData.Unlocklevel2 == 0) {
             texto2.SetActive(false);
             fase_2.image.overrideSprite = _lock;
             fase_2.interactable = false;
+        } else {
+            estrelasFase2();
         }
-        estrelasFase1();
-        estrelasFase2();
+        
+        
     }
     void estrelasFase1() {
         if (GameManager.gm.fase1 >= 2500) {

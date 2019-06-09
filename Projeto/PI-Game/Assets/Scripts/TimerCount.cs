@@ -9,13 +9,14 @@ public class TimerCount : MonoBehaviour
 
     public Text Timer;
     private float startTime;
-
+    private float diferenca = 0;
+    float t;
 
     // Start is called before the first frame update
     void Start()
     {
         if (GameManager.gm.ativarTime) {
-            startTime = Time.time;
+            t = 0;
         }
         
     }
@@ -24,8 +25,7 @@ public class TimerCount : MonoBehaviour
     void Update()
     {
         if (GameManager.gm.ativarTime) {
-            float t = Time.time - startTime;
-
+            t += (1.0f * Time.deltaTime);
             string minutes = ((int)t / 60).ToString();
             string seconds = (t % 60).ToString("f2");
 

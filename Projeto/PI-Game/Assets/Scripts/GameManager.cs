@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public int nInimigos = 0;
     public string tempo;
     public bool ativarTime = true;
+    public bool ativarInimigos = true;
   
   
     //score fases
@@ -39,7 +40,6 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
-       
         ScoreFases();
     }
     void ScoreFases() {

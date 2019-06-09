@@ -13,6 +13,8 @@ public class ShowPuzzles : MonoBehaviour
             puzzle.SetActive(true);
             puzzleController.SetActive(true);
             cronometro.SetActive(true);
+            GameManager.gm.ativarTime = false;
+            GameManager.gm.ativarInimigos = false;
         }
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 public class GlossarioController : MonoBehaviour
 {
     void Start() {
-        Debug.Log("FOI");
+        //Debug.Log("FOI");
     }
     public void IrSobreJogo() {
         StartCoroutine(SobreJogo());
@@ -65,6 +65,7 @@ public class GlossarioController : MonoBehaviour
     IEnumerator carregarLevel1() {
         yield return new WaitForSeconds(0);
         GameManager.check = false;
+        GameManager.gm.ScoreTotal = 0;
         SceneManager.LoadScene("Fase1");
     }
     public void Level2() {
@@ -73,6 +74,7 @@ public class GlossarioController : MonoBehaviour
     IEnumerator carregarLevel2() {
         yield return new WaitForSeconds(0);
         GameManager.check = false;
+        GameManager.gm.ScoreTotal = 0;
         SceneManager.LoadScene("Fase2");
     }
 }

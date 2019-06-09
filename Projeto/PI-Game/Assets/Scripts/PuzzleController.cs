@@ -118,7 +118,8 @@ public class PuzzleController : MonoBehaviour
             puzzle.SetActive(false);
             puzzleController.SetActive(false);
             Destroy(BonusPuzzle);
-            
+            GameManager.gm.ativarTime = true;
+            GameManager.gm.ativarInimigos = true;
         }
     }
 
