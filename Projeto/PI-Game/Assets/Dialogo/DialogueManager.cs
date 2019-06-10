@@ -59,6 +59,7 @@ public class DialogueManager : MonoBehaviour {
 	void EndDialogue()
 	{
 		animator.SetBool("IsOpen", false);
+        GameManager.gm.ativarInimigos = true;
 	}
 
 }

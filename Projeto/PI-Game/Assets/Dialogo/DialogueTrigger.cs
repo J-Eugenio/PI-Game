@@ -21,16 +21,15 @@ public class DialogueTrigger : MonoBehaviour {
         {
             nExec = 0;
             TriggerDialogue();
+            GameManager.gm.ativarInimigos = false;
             if (AtivarPuzzle) {
                 showPuzzles.SetActive(true);
                 plataforma.SetActive(true);
-            }
-
-            
+            }            
         }
-
-
-
     }
 
-}
+    private void OnTriggerExit2D(Collider2D other) {
+     
+    }
+    }
