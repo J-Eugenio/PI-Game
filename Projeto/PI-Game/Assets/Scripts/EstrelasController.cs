@@ -11,8 +11,9 @@ public class EstrelasController : MonoBehaviour
     public Sprite _lock;
     public GameObject texto1, texto2;
     void Start()
-    {       
-
+    {
+        Debug.Log(PlayerData.Unlocklevel1);
+        Debug.Log(PlayerData.Unlocklevel2);
     }
 
     // Update is called once per frame

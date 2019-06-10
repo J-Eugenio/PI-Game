@@ -13,7 +13,7 @@ public class GlossarioController : MonoBehaviour
     }
     IEnumerator SobreJogo() {
         yield return new WaitForSeconds(0);
-        PlayerPrefs.DeleteAll();
+       // PlayerPrefs.DeleteAll();
         SceneManager.LoadScene("GlossarioJogo");
     }
 
@@ -25,7 +25,7 @@ public class GlossarioController : MonoBehaviour
     IEnumerator SobreInimigo()
     {
         yield return new WaitForSeconds(0);
-        PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();
         SceneManager.LoadScene("TelaGlossarioInimigos");
     }
     public void IrSobrePersonagens() {
@@ -33,7 +33,7 @@ public class GlossarioController : MonoBehaviour
     }
     IEnumerator SobrePersonagens() {
         yield return new WaitForSeconds(0);
-        PlayerPrefs.DeleteAll();
+       // PlayerPrefs.DeleteAll();
         SceneManager.LoadScene("GlossarioPersonagens");
     }
     public void IrSobreItens() {
@@ -41,7 +41,7 @@ public class GlossarioController : MonoBehaviour
     }
     IEnumerator SobreItens() {
         yield return new WaitForSeconds(0);
-        PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();
         SceneManager.LoadScene("GlossarioItens");
     }
     public void Voltar() {

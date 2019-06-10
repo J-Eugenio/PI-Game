@@ -4801,6 +4801,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: attack2
       objectReference: {fileID: 0}
+    - target: {fileID: 3432535058731564842, guid: 4df03a48c62a84a498fd58c9daedaced,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6189426115712388488, guid: 4df03a48c62a84a498fd58c9daedaced,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -4986,15 +4991,15 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -6.4
       objectReference: {fileID: 0}
-    - target: {fileID: 3432535058731564842, guid: 4df03a48c62a84a498fd58c9daedaced,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1158065217121141905, guid: 4df03a48c62a84a498fd58c9daedaced,
         type: 3}
       propertyPath: m_RootOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189426115077504857, guid: 4df03a48c62a84a498fd58c9daedaced,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4df03a48c62a84a498fd58c9daedaced, type: 3}
@@ -9371,6 +9376,7 @@ MonoBehaviour:
   nInimigos: 0
   tempo: 
   ativarTime: 1
+  ativarInimigos: 1
   fase1: 0
   fase2: 0
 --- !u!4 &1991090447
