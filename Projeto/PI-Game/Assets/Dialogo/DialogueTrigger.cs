@@ -22,9 +22,10 @@ public class DialogueTrigger : MonoBehaviour {
             nExec = 0;
             TriggerDialogue();
             GameManager.gm.ativarInimigos = false;
+            plataforma.SetActive(true);
             if (AtivarPuzzle) {
                 showPuzzles.SetActive(true);
-                plataforma.SetActive(true);
+                
             }            
         }
     }
