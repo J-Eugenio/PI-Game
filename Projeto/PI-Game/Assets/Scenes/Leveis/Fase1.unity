@@ -962,7 +962,7 @@ PrefabInstance:
     - target: {fileID: 1316591093458256126, guid: 36949305b39ef9049ac898ce7d495580,
         type: 3}
       propertyPath: m_Mass
-      value: 0.45879167
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36949305b39ef9049ac898ce7d495580, type: 3}
@@ -5177,7 +5177,7 @@ PrefabInstance:
     - target: {fileID: 1316591093458256126, guid: 36949305b39ef9049ac898ce7d495580,
         type: 3}
       propertyPath: m_Mass
-      value: 0.23121375
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36949305b39ef9049ac898ce7d495580, type: 3}
@@ -11710,6 +11710,7 @@ GameObject:
   - component: {fileID: 823971338}
   - component: {fileID: 823971337}
   - component: {fileID: 823971336}
+  - component: {fileID: 823971339}
   m_Layer: 0
   m_Name: Checkpoint (1)
   m_TagString: Checkpoint
@@ -11819,6 +11820,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &823971339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823971334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00ddd33eae28b5148a72170d47ccd942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: "Assar\xE9"
+    sentences:
+    - "\"Provavelmente deve ter outro item para voc\xEA l\xE1 em cima, procure!\""
+    - "\"Este item \xE9 de suma importancia para voc\xEA passar desta fase!\""
+  showPuzzles: {fileID: 0}
+  plataforma: {fileID: 0}
+  nExec: 1
+  AtivarPuzzle: 0
 --- !u!1 &826688629 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6189426114770368391, guid: 4df03a48c62a84a498fd58c9daedaced,
@@ -19759,7 +19781,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1452284726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19857,7 +19879,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1452284725}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.83, y: 0.1, z: 0}
+  m_LocalPosition: {x: 193, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
