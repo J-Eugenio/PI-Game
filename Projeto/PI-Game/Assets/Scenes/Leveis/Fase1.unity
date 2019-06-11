@@ -18765,7 +18765,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1363604842}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 205.67497, y: -2.0972316, z: -0.0234375}
+  m_LocalPosition: {x: 207.1, y: -2.0972316, z: -0.0234375}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396330858}
@@ -18792,7 +18792,7 @@ MonoBehaviour:
       para voc\xEA."
     - "Veja que esta placa, est\xE1 apontando para uma dire\xE7\xE3o, siga ela!"
   showPuzzles: {fileID: 1452284725}
-  plataforma: {fileID: 0}
+  plataforma: {fileID: 1634824367}
   nExec: 1
   AtivarPuzzle: 1
 --- !u!61 &1363604845
@@ -20144,7 +20144,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1452284725}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 193, y: 0.1, z: 0}
+  m_LocalPosition: {x: 193.1, y: -0.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -22772,6 +22772,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1634824367 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8503967328027844295, guid: f319a14b2f4ce2c46be9595c1a797d2e,
+    type: 3}
+  m_PrefabInstance: {fileID: 877751463}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1641243887
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,6 +23,7 @@ public class DialogueTrigger : MonoBehaviour {
             TriggerDialogue();
             GameManager.gm.ativarInimigos = false;
             plataforma.SetActive(true);
+
             if (AtivarPuzzle) {
                 showPuzzles.SetActive(true);
                 
@@ -30,7 +31,4 @@ public class DialogueTrigger : MonoBehaviour {
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other) {
-     
-    }
     }
