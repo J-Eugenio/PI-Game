@@ -76,11 +76,13 @@ public class PuzzleController : MonoBehaviour
         if (!firstGuess) {
             firstGuess = true;
             firstGuessIndex = int.Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
+            btns[firstGuessIndex].interactable = false;
             firstGuessPuzzle = gamePuzzles[firstGuessIndex].name;
-            btns[firstGuessIndex].image.sprite = gamePuzzles[firstGuessIndex];
+            btns[firstGuessIndex].image.sprite = gamePuzzles[firstGuessIndex];           
         } else if(!secondGuess) {
             secondGuess = true;
             secondGuessIndex = int.Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
+            btns[secondGuessIndex].interactable = false;
             secondGuessPuzzle = gamePuzzles[secondGuessIndex].name;
             btns[secondGuessIndex].image.sprite = gamePuzzles[secondGuessIndex];
             countGuesses++;
@@ -102,6 +104,8 @@ public class PuzzleController : MonoBehaviour
             yield return new WaitForSeconds(.5f);
             btns[firstGuessIndex].image.sprite = bgImage[0];
             btns[secondGuessIndex].image.sprite = bgImage[0];
+            btns[firstGuessIndex].interactable = true;
+            btns[secondGuessIndex].interactable = true;
         }
         yield return new WaitForSeconds(.5f);
 

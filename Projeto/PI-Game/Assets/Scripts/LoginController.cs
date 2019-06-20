@@ -52,12 +52,15 @@ public class LoginController : MonoBehaviour {
                 Debug.Log(www.error);
             } else {
                 // Show results as text
-                Debug.Log(www.downloadHandler.text);
-                if (www.downloadHandler.text == "1") {
-                    FeedBackOK("Login realizado com sucesso...");
-                    StartCoroutine(CarregaScene());
-                } else {
+                if (www.downloadHandler.text == "0") {
+                    FeedBackOK("Login/senha incorretos...");
                     Debug.Log("Erro no Login");
+                } else {
+                    FeedBackOK("Login realizado com sucesso...");
+                    PlayerData.UsuarioId = www.downloadHandler.text;
+                    PlayerPrefs.SetString("UsuarioId", PlayerData.UsuarioId);
+                    Debug.Log("Id: "+PlayerData.UsuarioId);
+                    StartCoroutine(CarregaScene());
                 }
                 // Or retrieve results as binary data
                 byte[] results = www.downloadHandler.data;

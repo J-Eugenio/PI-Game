@@ -9,6 +9,7 @@ public class PlayerData : MonoBehaviour
     public static string level;
     public static float posX, posY, posZ;
     public static int vidas;
+    public static string UsuarioId;
     public GameObject[] datas;
 
     void Awake()
@@ -25,7 +26,7 @@ public class PlayerData : MonoBehaviour
         if(PlayerPrefs.HasKey("PosX") && PlayerPrefs.HasKey("PosY") &&
             PlayerPrefs.HasKey("PosZ") && PlayerPrefs.HasKey("Level") &&
             PlayerPrefs.HasKey("Vidas") && PlayerPrefs.HasKey("UnlockLevel1") 
-            && PlayerPrefs.HasKey("UnlockLevel2")) {
+            && PlayerPrefs.HasKey("UnlockLevel2") && PlayerPrefs.HasKey("UsuarioId")) {
             posX = PlayerPrefs.GetFloat("PosX");
             posY = PlayerPrefs.GetFloat("PosY");
             posZ = PlayerPrefs.GetFloat("PosZ");
@@ -33,6 +34,7 @@ public class PlayerData : MonoBehaviour
             vidas = PlayerPrefs.GetInt("Vidas");
             Unlocklevel1 = PlayerPrefs.GetInt("UnlockLevel1");
             Unlocklevel2 = PlayerPrefs.GetInt("UnlockLevel2");
+            UsuarioId = PlayerPrefs.GetString("UsuarioId");
 
         } else {
             PlayerPrefs.SetString("Level", level);
@@ -43,6 +45,7 @@ public class PlayerData : MonoBehaviour
             // PlayerPrefs.SetInt("Vidas", vidas);
             PlayerPrefs.SetInt("UnlockLevel1", Unlocklevel1);
             PlayerPrefs.SetInt("UnlockLevel2", Unlocklevel2);
+            PlayerPrefs.SetString("UsuarioId", UsuarioId);
         }
     }
 }
