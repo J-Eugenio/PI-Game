@@ -715,7 +715,6 @@ MonoBehaviour:
 '
   showPuzzles: {fileID: 0}
   plataforma: {fileID: 0}
-  nExec: 1
   AtivarPuzzle: 0
 --- !u!1001 &37713560
 PrefabInstance:
@@ -1636,7 +1635,6 @@ MonoBehaviour:
       deixei essa plataforma para voc\xEA subir e continuar no seu destino, tome cuidado\""
   showPuzzles: {fileID: 0}
   plataforma: {fileID: 838074845}
-  nExec: 1
   AtivarPuzzle: 0
 --- !u!1001 &104897593
 PrefabInstance:
@@ -4750,7 +4748,7 @@ GameObject:
   - component: {fileID: 355779308}
   m_Layer: 0
   m_Name: Dialogo
-  m_TagString: Untagged
+  m_TagString: dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4788,7 +4786,6 @@ MonoBehaviour:
     - "Bom que voc\xEA ir\xE1 acelerar hehe, cuidado Jogador!\n"
   showPuzzles: {fileID: 0}
   plataforma: {fileID: 0}
-  nExec: 1
   AtivarPuzzle: 0
 --- !u!61 &355779309
 BoxCollider2D:
@@ -11948,7 +11945,6 @@ MonoBehaviour:
     - "\"Este item \xE9 de suma importancia para voc\xEA passar desta fase!\""
   showPuzzles: {fileID: 0}
   plataforma: {fileID: 0}
-  nExec: 1
   AtivarPuzzle: 0
 --- !u!1 &826688629 stripped
 GameObject:
@@ -13254,7 +13250,6 @@ MonoBehaviour:
     - "\xC9 extemamente import\xE2nte que voc\xEA consiga passar!"
   showPuzzles: {fileID: 0}
   plataforma: {fileID: 0}
-  nExec: 1
   AtivarPuzzle: 0
 --- !u!4 &890390891
 Transform:
@@ -13625,7 +13620,7 @@ GameObject:
   - component: {fileID: 940051813}
   m_Layer: 0
   m_Name: Historia1
-  m_TagString: Untagged
+  m_TagString: dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13638,7 +13633,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 940051811}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -146.81, y: -17.75, z: 0}
+  m_LocalPosition: {x: -144.48, y: -17.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 522402912}
@@ -13670,7 +13665,6 @@ MonoBehaviour:
       ou ir\xE1 perder uma vida, cuidado.\n"
   showPuzzles: {fileID: 0}
   plataforma: {fileID: 0}
-  nExec: 1
   AtivarPuzzle: 0
 --- !u!61 &940051814
 BoxCollider2D:
@@ -18793,7 +18787,6 @@ MonoBehaviour:
     - "Veja que esta placa, est\xE1 apontando para uma dire\xE7\xE3o, siga ela!"
   showPuzzles: {fileID: 1452284725}
   plataforma: {fileID: 1634824367}
-  nExec: 1
   AtivarPuzzle: 1
 --- !u!61 &1363604845
 BoxCollider2D:
@@ -19666,7 +19659,6 @@ MonoBehaviour:
     - Tome cuidado jogador!
   showPuzzles: {fileID: 0}
   plataforma: {fileID: 0}
-  nExec: 1
   AtivarPuzzle: 0
 --- !u!1 &1419100267
 GameObject:
@@ -24807,7 +24799,7 @@ GameObject:
   - component: {fileID: 1773561369}
   m_Layer: 0
   m_Name: DialogoCheckpoint
-  m_TagString: Checkpoint
+  m_TagString: dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24944,7 +24936,6 @@ MonoBehaviour:
       algo la em cima, mas tem inimigos e n\xE3o consigo ver, cuidado jogador."
   showPuzzles: {fileID: 0}
   plataforma: {fileID: 0}
-  nExec: 1
   AtivarPuzzle: 0
 --- !u!1 &1777795830
 GameObject:
@@ -25289,6 +25280,16 @@ PrefabInstance:
       propertyPath: MinDistance
       value: 1.8931928
       objectReference: {fileID: 0}
+    - target: {fileID: 1781300788137849046, guid: 30ef59945f2a7ea499bbbe10a7d48f1a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781300788137849046, guid: 30ef59945f2a7ea499bbbe10a7d48f1a,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ea34ac2e8127acf438240f190882ff98, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30ef59945f2a7ea499bbbe10a7d48f1a, type: 3}
 --- !u!1 &1826579867
@@ -26494,6 +26495,7 @@ MonoBehaviour:
   puzzles: []
   gamePuzzles: []
   btns: []
+  countGuesses: 0
 --- !u!114 &1885469405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28254,6 +28256,8 @@ MonoBehaviour:
   tempo: 
   ativarTime: 1
   ativarInimigos: 1
+  nTentativasScore: 0
+  scorePuzzle: 0
   fase1: 0
   fase2: 0
 --- !u!4 &1991090447

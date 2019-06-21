@@ -60,6 +60,7 @@ public class DialogueManager : MonoBehaviour {
 	{
 		animator.SetBool("IsOpen", false);
         GameManager.gm.ativarInimigos = true;
+        Debug.Log("saiu");
 	}
 
 }
