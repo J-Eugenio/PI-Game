@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     public string tempo;
     public bool ativarTime = true;
     public bool ativarInimigos = true;
+    public int nTentativasScore = 0;
+    public int scorePuzzle = 0;
   
   
     //score fases
@@ -57,12 +59,16 @@ public class GameManager : MonoBehaviour
         this.ScoreTotal += (inimigosMortos * ScoreInimigo);
     }
     public void AddScorePuzzle(int nTentativas) {
-        if(nTentativas <= 8) {
+        this.nTentativasScore = nTentativas;
+        if (nTentativas <= 8) {
             this.ScoreTotal += 1000;
-        }else if (nTentativas > 8 && nTentativas < 15) {
+            this.scorePuzzle = 1000;
+        } else if (nTentativas > 8 && nTentativas < 15) {
             this.ScoreTotal += 500;
+            this.scorePuzzle = 500;
         } else {
             this.ScoreTotal += 200;
+            this.scorePuzzle = 200;
         }    
     }
     public void Addvidas(int vidas) {
@@ -98,7 +104,6 @@ public class GameManager : MonoBehaviour
         GameObject.Find("txtTempo").GetComponent<Text>().text = tempo;
         this.ativarTime = false;
     }
-
     public void SetVida(bool vida) {
         this.vida = vida;
     }
@@ -140,5 +145,11 @@ public class GameManager : MonoBehaviour
         this.win = false;
         this.tempo = "";
         this.ativarTime = true;
+        this.scorePuzzle = 0;
+        this.ScoreTotal = 0;
+        this.nTentativasScore = 0;
+        this.scorePuzzle = 0;
+        this.nInimigos = 0;
+
     }
 }

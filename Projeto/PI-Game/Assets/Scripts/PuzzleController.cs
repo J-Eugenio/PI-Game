@@ -15,7 +15,7 @@ public class PuzzleController : MonoBehaviour
     public List<Sprite> gamePuzzles = new List<Sprite>();
     public List<Button> btns = new List<Button>();
     private bool firstGuess, secondGuess;
-    private int countGuesses;
+    public int countGuesses;
     private int countCorrectGuesses;
     private int gameGuesses;
     private int firstGuessIndex, secondGuessIndex;
