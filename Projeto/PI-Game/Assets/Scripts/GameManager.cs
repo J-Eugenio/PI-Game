@@ -21,8 +21,8 @@ public class GameManager : MonoBehaviour
     public bool ativarInimigos = true;
     public int nTentativasScore = 0;
     public int scorePuzzle = 0;
-  
-  
+    public bool SomFase = true;
+    public bool SomFaseFinal = false;
     //score fases
     public int fase1 = 0;
     public int fase2 = 0;

@@ -26,7 +26,10 @@ public class PlayerController : MonoBehaviour {
     //usado no calculo para o personagem se mover
     float horizontalMove = 0f;
     int raw = 0;//valor faz o personagem ir para esquerda(-1), direita(1) ou fica parado(0)
-
+    [SerializeField]
+    private GameObject somFase;
+    [SerializeField]
+    private GameObject somFaseFinal;
     private void Awake()
     {
         
@@ -74,7 +77,11 @@ public class PlayerController : MonoBehaviour {
             }
 
             GameManager.gm.AttHudScore();
-
+            somFase.SetActive(false);
+            somFaseFinal.SetActive(true);
+        } else {
+            somFase.SetActive(true);
+            somFaseFinal.SetActive(false);
         }
 
 
