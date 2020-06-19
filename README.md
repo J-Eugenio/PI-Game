@@ -1,5 +1,5 @@
 <!-- ⚠️ This README has been generated from the file(s) "blueprint.md" ⚠️--><p align="center">
-  <img src="https://raw.githubusercontent.com/J-Eugenio/PI-Game/master/Projeto/PI-Game/Assets/Dragon%20Warrior%20Files/Dragon%20Warrior%20PNG/attack_01.png" alt="Logo" width="150" height="150" />
+  <img src="https://raw.githubusercontent.com/J-Eugenio/PI-Game/master/Projeto/PI-Game/Assets/Dragon%20Warrior%20Files/Dragon%20Warrior%20PNG/attack_01.png" alt="Logo" />
 </p>
 <h1 align="center">PI Game</h1>
 <p align="center">
